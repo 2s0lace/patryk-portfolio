@@ -237,6 +237,14 @@ button {
 .theme-option:not(.is-active),
 .locale-button:not(.is-active) {
   color: var(--muted);
+  filter: blur(0.9px);
+}
+
+.theme-option:hover,
+.theme-option:focus-visible,
+.locale-button:hover,
+.locale-button:focus-visible {
+  filter: none;
 }
 
 .theme-option.is-active,
@@ -417,6 +425,12 @@ button {
 
 .mode-button:not(.is-active) {
   color: var(--muted);
+  filter: blur(0.9px);
+}
+
+.mode-button:hover,
+.mode-button:focus-visible {
+  filter: none;
 }
 
 .mode-button.is-active {
@@ -2515,7 +2529,7 @@ h1.is-swapping > * {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
     max-width: 540px;
     margin-inline: auto;
@@ -2533,7 +2547,6 @@ h1.is-swapping > * {
   }
 
   .control-cluster > .utility-pill {
-    scale: 0.9;
     transform-origin: left center;
   }
 
@@ -2546,28 +2559,31 @@ h1.is-swapping > * {
   .mode-button {
     flex: 1 1 0;
     min-width: 0;
-    padding: 9px 10px;
+    padding: 10px 12px;
   }
 
   .utility-pill {
     flex: 1 1 65%;
     width: auto;
-    justify-content: space-evenly;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 10px;
     min-height: 0;
-    padding: 4px 8px;
+    padding: 5px 12px;
   }
 
   .utility-pill .theme-option {
-    width: 30px;
-    min-width: 30px;
-    padding: 9px 2px;
-    font-size: 9px;
+    width: auto;
+    min-width: 0;
+    padding: 9px 4px;
+    font-size: 10px;
   }
 
   .utility-pill .theme-switch,
   .utility-pill .locale-switch {
-    display: contents;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 0;
   }
 
   .utility-pill .locale-switch {
@@ -2575,23 +2591,23 @@ h1.is-swapping > * {
   }
 
   .utility-pill .locale-button {
-    width: 20px;
-    min-width: 20px;
-    padding: 9px 2px;
-    font-size: 9px;
+    width: auto;
+    min-width: 0;
+    padding: 9px 4px;
+    font-size: 10px;
   }
 
   .utility-pill .theme-option + .theme-option,
   .utility-pill .locale-button + .locale-button {
-    margin-left: 0;
+    margin-left: 2px;
   }
 
   .utility-pill .contact-link {
     width: auto;
     min-width: 0;
-    gap: 3px;
+    gap: 4px;
     padding: 9px 4px;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .topbar.is-away-from-top .control-cluster {
@@ -2611,29 +2627,26 @@ h1.is-swapping > * {
 
 @media (max-width: 720px) {
   .control-cluster {
-    gap: 6px;
+    gap: 8px;
+    translate: 0 0;
   }
 
   .mode-button {
-    padding-inline: 4px;
+    padding-inline: 5px;
     font-size: 10px;
   }
 
   .utility-pill {
-    gap: 5px;
-    padding-inline: 8px;
+    gap: 8px;
+    padding-inline: 10px;
   }
 
-  .utility-pill .theme-option {
-    width: 28px;
-    min-width: 28px;
-    font-size: 9px;
-  }
-
+  /* fixed label widths left the groups touching; let them size to their text */
+  .utility-pill .theme-option,
   .utility-pill .locale-button {
-    width: 19px;
-    min-width: 19px;
-    padding-inline: 2px;
+    width: auto;
+    min-width: 0;
+    padding-inline: 4px;
     font-size: 9px;
   }
 
@@ -2645,9 +2658,48 @@ h1.is-swapping > * {
   .utility-pill .contact-link {
     width: auto;
     min-width: 0;
-    gap: 3px;
-    padding-inline: 2px;
+    gap: 4px;
+    padding-inline: 3px;
     font-size: 9px;
+  }
+}
+
+/* Both pills on one phone row left the labels almost touching. The utility
+   pill gets its own row below, and the controls go back to a normal size. */
+@media (max-width: 560px) {
+  .control-cluster {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .control-cluster > .mode-switch,
+  .control-cluster > .utility-pill {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .mode-button {
+    padding-inline: 14px;
+    font-size: 11px;
+  }
+
+  .utility-pill {
+    gap: 14px;
+    padding-inline: 16px;
+  }
+
+  .utility-pill .theme-option,
+  .utility-pill .locale-button {
+    padding-inline: 6px;
+    font-size: 10px;
+  }
+
+  .utility-pill .contact-link {
+    gap: 5px;
+    padding-inline: 4px;
+    font-size: 10px;
   }
 }
 

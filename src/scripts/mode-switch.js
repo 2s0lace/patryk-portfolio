@@ -773,13 +773,12 @@ aiChatSend?.addEventListener("click", () => {
   }, 820);
 });
 
-const headlineMotion = window.matchMedia("(min-width: 721px)");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let headlineGhost = null;
 let headlineSwapToken = 0;
 
 function canAnimateHeadline() {
-  return headlineMotion.matches && !reducedMotion.matches;
+  return !reducedMotion.matches;
 }
 
 function prepareHeadlineSwap(direction) {
@@ -815,7 +814,7 @@ function runHeadlineSwap(direction) {
   }
 
   const token = ++headlineSwapToken;
-  const shift = 72 * direction;
+  const shift = (window.innerWidth <= 720 ? 36 : 72) * direction;
   const easing = "cubic-bezier(0.2, 0.7, 0.2, 1)";
 
   let done = false;

@@ -2664,6 +2664,39 @@ h1.is-swapping > * {
   }
 }
 
+/* A phone row cannot hold both label pairs without the words touching, so the
+   theme and locale controls collapse to the one option you are not on: the
+   label names where the tap takes you, and the pair swaps itself on click. */
+@media (max-width: 560px) {
+  .utility-pill .theme-option.is-active,
+  .utility-pill .locale-button.is-active {
+    display: none;
+  }
+
+  .utility-pill .theme-option,
+  .utility-pill .locale-button {
+    padding-inline: 6px;
+    color: var(--ink);
+    font-size: 10px;
+    filter: none;
+  }
+
+  .utility-pill {
+    gap: 14px;
+    padding-inline: 16px;
+  }
+
+  .utility-pill .contact-link {
+    gap: 5px;
+    padding-inline: 4px;
+    font-size: 10px;
+  }
+
+  .mode-button {
+    padding-inline: 10px;
+  }
+}
+
 @media (max-width: 1024px) and (prefers-reduced-motion: reduce) {
   .control-cluster {
     transition: none;

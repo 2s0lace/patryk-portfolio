@@ -2664,45 +2664,6 @@ h1.is-swapping > * {
   }
 }
 
-/* Both pills on one phone row left the labels almost touching. The utility
-   pill gets its own row below, and the controls go back to a normal size. */
-@media (max-width: 560px) {
-  .control-cluster {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .control-cluster > .mode-switch,
-  .control-cluster > .utility-pill {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 100%;
-  }
-
-  .mode-button {
-    padding-inline: 14px;
-    font-size: 11px;
-  }
-
-  .utility-pill {
-    gap: 14px;
-    padding-inline: 16px;
-  }
-
-  .utility-pill .theme-option,
-  .utility-pill .locale-button {
-    padding-inline: 6px;
-    font-size: 10px;
-  }
-
-  .utility-pill .contact-link {
-    gap: 5px;
-    padding-inline: 4px;
-    font-size: 10px;
-  }
-}
-
 @media (max-width: 1024px) and (prefers-reduced-motion: reduce) {
   .control-cluster {
     transition: none;

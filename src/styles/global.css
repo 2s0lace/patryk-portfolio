@@ -2668,17 +2668,17 @@ h1.is-swapping > * {
    theme and locale controls collapse to the one option you are not on: the
    label names where the tap takes you, and the pair swaps itself on click. */
 @media (max-width: 560px) {
-  .utility-pill .theme-option.is-active,
-  .utility-pill .locale-button.is-active {
+  /* both options stay visible so the blurred inactive one still reads as
+     the design language; the contact link makes room for them, since the
+     picker below and the footer both carry it already */
+  .utility-pill .contact-link {
     display: none;
   }
 
   .utility-pill .theme-option,
   .utility-pill .locale-button {
-    padding-inline: 6px;
-    color: var(--ink);
+    padding-inline: 5px;
     font-size: 10px;
-    filter: none;
   }
 
   /* the pills stay side by side and share the row: the mode switch is the

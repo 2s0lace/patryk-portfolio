@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:covers": "node scripts/build-covers.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/vercel": "^11.0.8",
     "astro": "^7.2.9"
   }
 }

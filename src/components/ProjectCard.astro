@@ -1,37 +1,62 @@
 ---
-interface Props {
-  number: string;
-  title: string;
-  type: string;
-  theme: "sand" | "olive";
-  large?: boolean;
-}
+import type { PortfolioProject } from "../data/projects";
 
-const { number, title, type, theme, large = false } = Astro.props;
+type Props = PortfolioProject;
+
+const {
+  number,
+  title,
+  type,
+  typeKey,
+  href,
+  image,
+  imageAlt = "",
+  visualText,
+  stat,
+  statKey,
+  wip = false,
+  wipKey,
+  tone = "ink",
+  size = "standard",
+  sources,
+} = Astro.props;
 ---
 
-<article class:list={["work-card", large && "work-card-large"]}>
-  <div class:list={["card-visual", `visual-${theme}`]}>
-    <span class="visual-label">{number}</span>
-
-    {theme === "sand" ? (
-      <>
-        <span class="visual-shape shape-circle"></span>
-        <span class="visual-shape shape-stair"></span>
-      </>
-    ) : (
-      <>
-        <span class="visual-word" data-i18n="projectTwoVisual">still
-moving</span>
-        <span class="visual-shape shape-square"></span>
-      </>
-    )}
-  </div>
-  <div class="card-meta">
-    <div>
-      <h3 data-i18n={theme === "sand" ? "projectOneTitle" : "projectTwoTitle"}>{title}</h3>
-      <p data-i18n={theme === "sand" ? "projectOneType" : "projectTwoType"}>{type}</p>
+<article class:list={["work-card", `work-card-${size}`]}>
+  <a
+    class="card-visual-link"
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    aria-label={`Open ${title}`}
+  >
+    <div class:list={["card-visual", !image && `visual-${tone}`, visualText && stat && "has-dual-copy"]}>
+      {image ? (
+        <img src={image} alt={imageAlt} loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+      ) : (
+        <span class="visual-word">{visualText}</span>
+      )}
+      <span class="visual-label">{number}</span>
+      {stat && (
+        <span class="card-stat" data-i18n={statKey}>{stat}</span>
+      )}
+      <span class="card-open" aria-hidden="true">↗</span>
     </div>
-    <span class="card-arrow" aria-hidden="true">↗</span>
+  </a>
+
+  <div class="card-meta">
+    <div class="card-title-group">
+      <h3><a href={href} target="_blank" rel="noreferrer">{title}</a></h3>
+      <p data-i18n={typeKey}>{type}</p>
+      {wip && <span class="card-wip" data-i18n={wipKey}>work in progress</span>}
+    </div>
+    <div class="card-sources" aria-label="Project sources">
+      {sources.map((source) => (
+        <a class="source-pill" href={source.href} target="_blank" rel="noreferrer">
+          <span>{source.label}</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
   </div>
 </article>

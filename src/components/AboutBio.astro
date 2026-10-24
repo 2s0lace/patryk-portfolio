@@ -1,0 +1,74 @@
+---
+import earlyGraphic from "../unnamed.png";
+import TopsterModal from "./TopsterModal.astro";
+
+interface BioParagraph {
+  text: string;
+  refs: number[];
+  after?: string;
+  afterRefs?: number[];
+  end?: string;
+}
+
+const copy: Record<"en" | "pl", BioParagraph[]> = {
+  en: [
+    { text: "I work with JMO on OPPO campaigns in Poland, creating graphics, editing and animating videos, and helping localize content through translation, on-screen text, and subtitles. Two campaign videos I worked on reached 8.4M and 11.4M views on TikTok.", refs: [1, 2], after: "Alongside that, I take on freelance projects in branding, esports graphics, and album artwork." },
+    { text: "I first got into digital design in 2012, messing around in Cinema 4D. A year later, inspired by Polish YouTubers and thumbnail creators like emF3lipe, I opened GIMP and After Effects and learned by clicking around.", refs: [3], after: "In 2014, I entered a graphics competition called ‘Painted with a Mouse,’ using a cheap gaming mouse and a lot of patience.", afterRefs: [4], end: "Later, proving my graphic design teacher wrong became another motivation. Mostly, I just couldn’t imagine doing something that wasn’t creative." },
+    { text: "In 2020, a boring school assignment became 2s0lace, my space for rough typography, music-inspired visuals, glitches, and posters. It helped me find my taste and led to freelance work.", refs: [5], after: "I also experimented with Blender along the way, and I’d like to return to 3D and learn it properly." },
+    { text: "My interests took me into English Philology at the University of Warsaw, language teaching, and later Cybersecurity at VIZJA University. I’ve always been curious about how people communicate and how things work. Those interests come together in projects like digiQUIZ and nAIczyciel.pl, where I explore interfaces, education, and technology.", refs: [6, 7] },
+    { text: "Outside work, I’m usually listening to music, going to gigs, or playing something competitive.", refs: [8], after: "I’ve reached Master in Teamfight Tactics and Diamond I in League of Legends, with plenty of competitive Pokémon along the way. I like the design of Nothing and Teenage Engineering. My own setup is a MacBook Air next to a custom PC with mismatched fans, usually with a cat somewhere nearby. Simple things with a bit of personality tend to stay with me." },
+  ],
+  pl: [
+    { text: "Pracuję z JMO przy kampaniach OPPO w Polsce. Tworzę grafiki, montuję i animuję materiały wideo oraz pomagam w ich lokalizacji: tłumaczeniach, adaptacji tekstów ekranowych i napisach. Dwa filmy kampanijne, przy których pracowałem, osiągnęły 8,4 i 11,4 mln wyświetleń na TikToku.", refs: [1, 2], after: "Poza tym realizuję zlecenia freelancerskie związane z brandingiem, grafiką e-sportową i okładkami muzycznymi." },
+    { text: "Projektowaniem cyfrowym zainteresowałem się w 2012 roku, eksperymentując w Cinema 4D. Rok później, zainspirowany polskimi YouTuberami i twórcami miniaturek, takimi jak emF3lipe, otworzyłem GIMP-a i After Effects. Uczyłem się, po prostu klikając i sprawdzając, co się stanie.", refs: [3], after: "W 2014 roku wziąłem udział w konkursie grafiki komputerowej „Myszką malowane”. Miałem tanią myszkę gamingową i dużo cierpliwości.", afterRefs: [4], end: "Później doszła też chęć udowodnienia mojemu nauczycielowi grafiki, że się mylił. Przede wszystkim jednak nie wyobrażałem sobie robienia czegoś, co nie byłoby kreatywne." },
+    { text: "W 2020 roku z nudnego zadania szkolnego powstało 2s0lace, moja przestrzeń na surową typografię, obrazy inspirowane muzyką, glitche i plakaty. Tam odkrywałem swój gust, a z czasem pojawiły się zlecenia freelancerskie.", refs: [5], after: "Po drodze eksperymentowałem też z Blenderem. Chciałbym wrócić do 3D i porządnie się go nauczyć." },
+    { text: "Moje zainteresowania zaprowadziły mnie na filologię angielską na Uniwersytecie Warszawskim, do nauczania języka, a później na cyberbezpieczeństwo na Uniwersytecie VIZJA. Zawsze ciekawiło mnie, jak ludzie się komunikują i jak działają różne rzeczy. Te zainteresowania spotykają się w projektach takich jak digiQUIZ i nAIczyciel.pl, gdzie zajmuję się interfejsami, edukacją i technologią.", refs: [6, 7] },
+    { text: "Po pracy najczęściej słucham muzyki, chodzę na koncerty albo gram w coś rywalizacyjnego.", refs: [8], after: "Wbiłem Mastera w Teamfight Tactics i Diamond I w League of Legends, a po drodze spędziłem sporo czasu na competitive Pokémon. Lubię wzornictwo Nothing i Teenage Engineering. Mój zestaw to MacBook Air obok peceta z przypadkowymi wentylatorami, zwykle z kotem gdzieś w pobliżu. Lubię proste rzeczy, które mają własny charakter." },
+  ],
+};
+
+const sources = [
+  { href: "https://www.tiktok.com/@oppopoland/video/7675669840618605857", en: "OPPO campaign · video 01", pl: "Kampania OPPO · film 01" },
+  { href: "https://www.tiktok.com/@oppopoland/video/7677598965516274976", en: "OPPO campaign · video 02", pl: "Kampania OPPO · film 02" },
+  { href: earlyGraphic.src, en: "An early YouTube graphic · 2013", pl: "Wczesna grafika na YouTube · 2013" },
+  { href: "http://www.psp4.radom.pl/webs/sukcesy20142015/myszkamalowane15.htm", en: "‘Painted with a Mouse’ · school competition", pl: "„Myszką malowane” · konkurs międzyszkolny" },
+  { href: "https://www.behance.net/2s0lace", en: "2s0lace · selected projects", pl: "2s0lace · wybrane projekty" },
+  { href: "https://www.behance.net/gallery/249299475/digiQUIZ-UIUX-Case-Study-(WIP)-(2026)", en: "digiQUIZ · UX/UI case study", pl: "digiQUIZ · UX/UI case study" },
+  { href: "https://github.com/2s0lace/", en: "My projects on GitHub", pl: "Moje projekty na GitHubie" },
+  { href: "https://www.last.fm/user/brockpatron", en: "What I listen to · Last.fm", pl: "Czego słucham · Last.fm" },
+];
+---
+
+<div class="about-narrative" data-mode-only="patryk">
+  {(["pl", "en"] as const).map((locale) => (
+    <div data-bio-locale={locale} lang={locale} hidden={locale !== "pl"}>
+      <div class="bio-prose">
+        {copy[locale].map((paragraph) => (
+          <p>
+            {paragraph.text}
+            {paragraph.refs.map((number) => <sup class="bio-reference"><a id={`${locale}-bio-cite-${number}`} href={`#${locale}-bio-source-${number}`} aria-label={`${locale === "pl" ? "Odnośnik" : "Reference"} ${number}`}>[{number}]</a></sup>)}
+            {paragraph.after && <> {paragraph.after}</>}
+            {paragraph.afterRefs?.map((number) => <sup class="bio-reference"><a id={`${locale}-bio-cite-${number}`} href={`#${locale}-bio-source-${number}`} aria-label={`${locale === "pl" ? "Odnośnik" : "Reference"} ${number}`}>[{number}]</a></sup>)}
+            {paragraph.end && <> {paragraph.end}</>}
+          </p>
+        ))}
+      </div>
+      <div class="bio-music-links">
+        <button type="button" data-music-grid="rym" aria-haspopup="dialog" aria-controls="topster-modal">Topster</button>
+        <button type="button" data-music-grid="lastfm" aria-haspopup="dialog" aria-controls="topster-modal">Last.fm · {locale === "pl" ? "30 dni" : "30 days"}</button>
+      </div>
+      <footer class="bio-references">
+        <h3>{locale === "pl" ? "Odnośniki" : "References"}</h3>
+        <ol>
+          {sources.map((source, index) => (
+            <li id={`${locale}-bio-source-${index + 1}`}>
+              <a class="bio-source-back" href={`#${locale}-bio-cite-${index + 1}`} aria-label={locale === "pl" ? "Wróć do tekstu" : "Back to text"}>[{index + 1}]</a>
+              <a href={source.href} target="_blank" rel="noreferrer">{source[locale]} <span aria-hidden="true">↗</span></a>
+            </li>
+          ))}
+        </ol>
+      </footer>
+    </div>
+  ))}
+</div>
+<TopsterModal />

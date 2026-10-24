@@ -1,0 +1,872 @@
+[
+  {
+    "artist": "Mid-Air Thief",
+    "title": "무너지기",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/768d9f68b610a3e2e82eee573554046d.jpg"
+  },
+  {
+    "artist": "Parannoul",
+    "title": "After the Night",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/05e523ab0624b5bfe8c197638335f5cf.jpg"
+  },
+  {
+    "artist": "Shadow Community",
+    "title": "거울의 숲",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/aebc341c8725b1662dad70f263e0f9d0.jpg"
+  },
+  {
+    "artist": "25,000 kittens",
+    "title": "25,000 kittens",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/beb8e846019ff12599fa28b5d0e16215.png"
+  },
+  {
+    "artist": "2814",
+    "title": "新しい日の誕生",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4cd18735d4a3cd8d8d7ec770eb6f3aba.png"
+  },
+  {
+    "artist": "9090gate",
+    "title": "London's Saviour",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/24aa9dca959893bf1ef33ac092be8604.png"
+  },
+  {
+    "artist": "Against All Logic",
+    "title": "2012 - 2017",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a181e0bac12b3f98769c6ef93035f252.jpg"
+  },
+  {
+    "artist": "American Football",
+    "title": "American Football (Live in Los Angeles)",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ffd15a4367209a460702ffa673703d93.png"
+  },
+  {
+    "artist": "American Football",
+    "title": "American Football [LP3]",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a6f02dc194d61fde1866dbdc30565d8d.jpg"
+  },
+  {
+    "artist": "Aphex Twin",
+    "title": "Selected Ambient Works 85-92",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/36307d33d9e5025c8f4564748e17a5f8.jpg"
+  },
+  {
+    "artist": "The Avalanches",
+    "title": "Since I Left You",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/83f16d352da8e6e4fd0cb32c49bf9cfc.jpg"
+  },
+  {
+    "artist": "Christoph de Babalon",
+    "title": "If You're Into It, I'm Out of It",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d89fdfa21d47e9353794d8c7688c740c.jpg"
+  },
+  {
+    "artist": "BADBADNOTGOOD",
+    "title": "Talk Memory",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/efa7d132ac763cc1580a0f3b8f9d4dfc.png"
+  },
+  {
+    "artist": "William Basinski",
+    "title": "El Camino Real",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f066954b8ff7ded771400eb705cb8da1.jpg"
+  },
+  {
+    "artist": "Big Thief",
+    "title": "Dragon New Warm Mountain I Believe in You",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c5ead34a6aca64a663a3ed83fadfc742.jpg"
+  },
+  {
+    "artist": "Biosphere",
+    "title": "Substrata",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4185bce0c2fa41dec1f3414f3e119687.png"
+  },
+  {
+    "artist": "Björk",
+    "title": "Vespertine",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/07abbf9ec5a98dcf4978836a5953faff.jpg"
+  },
+  {
+    "artist": "Bladee",
+    "title": "Icedancer",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6893332c459d779c9e00b3a09aa31589.jpg"
+  },
+  {
+    "artist": "Bladee",
+    "title": "Plastic Surgery",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3fc5b6a3533c57a91b7181738de5e1b8.jpg"
+  },
+  {
+    "artist": "Boards of Canada",
+    "title": "Music Has the Right to Children",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5964ceac5b219e3ae5e2242f7a5d3c96.jpg"
+  },
+  {
+    "artist": "David Bowie",
+    "title": "★ [Blackstar]",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cc833a0572f90328ab838cfe16998d3e.jpg"
+  },
+  {
+    "artist": "BROCKHAMPTON",
+    "title": "Saturation II",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/5c50b8fb0d6073befc75e62e3aa938cf.jpg"
+  },
+  {
+    "artist": "BROCKHAMPTON",
+    "title": "Saturation III",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d6fdbf180b3432a2d7672aaa35749ce7.png"
+  },
+  {
+    "artist": "BROCKHAMPTON",
+    "title": "Saturation I II III",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/01e97e92406e87a5de70ffc3d298e729.jpg"
+  },
+  {
+    "artist": "Danny Brown",
+    "title": "Atrocity Exhibition",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7288ec5442a34c3583f9cb38d38595ee.jpg"
+  },
+  {
+    "artist": "Danny Brown",
+    "title": "Stardust",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95dac142400b9565c70b6c944b576f09.jpg"
+  },
+  {
+    "artist": "Harold Budd, Elizabeth Fraser, Robin Guthrie & Simon Raymonde",
+    "title": "The Moon and the Melodies",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c13d0e548e38455ec5664efe7f8582b0.jpg"
+  },
+  {
+    "artist": "Burial",
+    "title": "Kindred EP",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d13533d348b36e97f05fa7e053f13f87.png"
+  },
+  {
+    "artist": "Burial",
+    "title": "Untrue",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2c7332bc861d406a80c13f0e69d4ba7f.png"
+  },
+  {
+    "artist": "Burial + Four Tet",
+    "title": "Nova / Moth",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/35a0476b6ac7221dcbb89d85b56d0f84.jpg"
+  },
+  {
+    "artist": "C418",
+    "title": "Minecraft: Volume Alpha",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b2ced6b94438072c2803c5497e93abd6.jpg"
+  },
+  {
+    "artist": "Ethel Cain",
+    "title": "Perverts",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/afbc65763138c684617ac5c030d8c5fb.jpg"
+  },
+  {
+    "artist": "Carissa's Wierd",
+    "title": "Songs About Leaving",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/814c1cc46e2a1ce0aedca222e68b9894.png"
+  },
+  {
+    "artist": "Charli xcx",
+    "title": "How I'm Feeling Now",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9d584d6fc6300f7fbd98de3efacfd1ba.jpg"
+  },
+  {
+    "artist": "Ciśnienie",
+    "title": "(Angry Noises)",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0e874d4a17b5106ad90e206e70c98ea0.jpg"
+  },
+  {
+    "artist": "Ciśnienie",
+    "title": "JazzArt Underground",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/51034f839945afcabfceaaaa418d9350.jpg"
+  },
+  {
+    "artist": "George Clanton",
+    "title": "Slide",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c296b14e61cd4583ebf4dc3cea8d849.jpg"
+  },
+  {
+    "artist": "cLOUDDEAD",
+    "title": "cLOUDDEAD",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/cef7c0f92b1649a4b46cc3e4ee3f6729.png"
+  },
+  {
+    "artist": "Cocteau Twins",
+    "title": "Heaven or Las Vegas",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/350066babb80493fc9fa9b63dd40086d.png"
+  },
+  {
+    "artist": "John Coltrane",
+    "title": "A Love Supreme",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/29555acae2ed44eea3882de43a606fd9.png"
+  },
+  {
+    "artist": "ConcernedApe",
+    "title": "Stardew Valley",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f09de0152bce7653ae25e1d8acd91a44.jpg"
+  },
+  {
+    "artist": "The Cure",
+    "title": "Pornography",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dcf7ccf93e1c445583ff952f49eb7a5d.png"
+  },
+  {
+    "artist": "Denzel Curry",
+    "title": "Imperial",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f24be6fb8075d54d9f8eaeaba5fa5187.jpg"
+  },
+  {
+    "artist": "Daft Punk",
+    "title": "Alive 2007",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3b9e9decf68b4f109f57d72d8ebd4b4b.jpg"
+  },
+  {
+    "artist": "Daft Punk",
+    "title": "Discovery",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1340e9e1082cf0dc748583b7eefce6d5.jpg"
+  },
+  {
+    "artist": "Daft Punk",
+    "title": "Random Access Memories",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/11dd7e48a1f042c688bf54985f01d088.png"
+  },
+  {
+    "artist": "dar Qness",
+    "title": "Solace",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ff0972926f2af6b3dc91bac14122b859.png"
+  },
+  {
+    "artist": "Death Grips",
+    "title": "Exmilitary",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/831e96df3afd4777c7ac562537bdb356.png"
+  },
+  {
+    "artist": "Death Grips",
+    "title": "The Money Store",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/30ef0d3d35720910529fe026a2d2fe7c.jpg"
+  },
+  {
+    "artist": "Death Grips",
+    "title": "The Powers That B",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3c9e7fdb97214aefca5a964c6c1240dc.jpg"
+  },
+  {
+    "artist": "Lana Del Rey",
+    "title": "Norman Fucking Rockwell!",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ab9ed65c5b337129f6b50ca5894d7319.png"
+  },
+  {
+    "artist": "McKinley Dixon",
+    "title": "Magic, Alive!",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/eadd6e7c27f332bfc59099a5aa7aba4d.jpg"
+  },
+  {
+    "artist": "DJ Seinfeld",
+    "title": "Time Spent Away From U",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9d884d1a88e348a82e3ff8a36ddf6a3e.jpg"
+  },
+  {
+    "artist": "DJ Shadow",
+    "title": "Endtroducing.....",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8792784aab5c4aeab78ad8525c1c2440.png"
+  },
+  {
+    "artist": "DJ Sprinkles",
+    "title": "Midtown 120 Blues",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2b47dcb38285050ad28a42b1512cfe19.png"
+  },
+  {
+    "artist": "Earl Sweatshirt",
+    "title": "I Don't Like Shit, I Don't Go Outside",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b22739c52883437cc3a957b694e904e4.jpg"
+  },
+  {
+    "artist": "Earl Sweatshirt",
+    "title": "Some Rap Songs",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b7b9b1e9d8007ddaeaa9ee8a8e45a4c3.png"
+  },
+  {
+    "artist": "Ecco2k",
+    "title": "BeautySleep",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/27cc5a6b18c74286c2cf2a7548f9ae4a.png"
+  },
+  {
+    "artist": "Ecco2k",
+    "title": "E",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a15ce3e3c915faa4b90d6fb155359506.jpg"
+  },
+  {
+    "artist": "EsDeeKid",
+    "title": "Rebel",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/08e715c0f5f7e77f6f1c6014e0f3e7d4.jpg"
+  },
+  {
+    "artist": "Femi & Malibu",
+    "title": "United in Flames 23/10/2018",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1f154fb0ee7bf724458b2253fc568894.jpg"
+  },
+  {
+    "artist": "Fishmans",
+    "title": "Long Season",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6bdce8a547e0003901a829ebce43183c.png"
+  },
+  {
+    "artist": "FKA twigs",
+    "title": "Eusexua",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ff1c25d761e9059327d773bfa3a8becf.png"
+  },
+  {
+    "artist": "FKA twigs",
+    "title": "Eusexua Afterglow",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ea79e7faa1cef69b6c8819b3facabcd0.png"
+  },
+  {
+    "artist": "Freddie Gibbs & Madlib",
+    "title": "Piñata",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/1e297b4385fa4c16cc911398d13bdf04.png"
+  },
+  {
+    "artist": "Godspeed You Black Emperor!",
+    "title": "F♯A♯∞",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/694ac27d856ada6798f51a83af705b98.jpg"
+  },
+  {
+    "artist": "Godspeed You Black Emperor!",
+    "title": "Lift Yr. Skinny Fists Like Antennas to Heaven!",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a6c272f896b1579be7ea3dd566d00e77.jpg"
+  },
+  {
+    "artist": "Grammatik",
+    "title": "Światła miasta",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f04b6a9ba94d41e38f2bc6cad192e25e.jpg"
+  },
+  {
+    "artist": "Isaac Hayes",
+    "title": "Hot Buttered Soul",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/dedfe0d199ea42bfc2f76945f500c0e9.png"
+  },
+  {
+    "artist": "Tim Hecker",
+    "title": "Ravedeath, 1972",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9de43f0a02c8b0a3fe8996b3c75ad2fb.jpg"
+  },
+  {
+    "artist": "Jon Hopkins",
+    "title": "Immunity",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c23dbf5757005cc235f6e52183830bd.jpg"
+  },
+  {
+    "artist": "Iglooghost",
+    "title": "Tidal Memory Exo",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/72897258fdbfcaa4ff5b84ce0d004607.jpg"
+  },
+  {
+    "artist": "Injury Reserve",
+    "title": "By the Time I Get to Phoenix",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0f605ea6f6dc065b79d53924d8971272.jpg"
+  },
+  {
+    "artist": "Jan Jelinek",
+    "title": "Loop-Finding-Jazz-Records",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/730c05c9605a41f29b5f34fe80b20347.png"
+  },
+  {
+    "artist": "JID",
+    "title": "The Forever Story",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/f5ebc39b1f907ab9e0df8ea47841f0c5.jpg"
+  },
+  {
+    "artist": "JPEGMAFIA & Danny Brown",
+    "title": "Scaring the Hoes",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/df9e72398d90044cb4d8e945d0d1abe3.jpg"
+  },
+  {
+    "artist": "Kelela & Asmara",
+    "title": "Aquaphoria",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/724cf5f2b79d0164cec8f015d447ffcb.png"
+  },
+  {
+    "artist": "Kero Kero Bonito",
+    "title": "Civilisation",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9050bc1bbd7d514eb0f744732ec6e01c.jpg"
+  },
+  {
+    "artist": "Kylie",
+    "title": "Fever",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ef688f92a343e37c56fb29865f059ce9.png"
+  },
+  {
+    "artist": "Kendrick Lamar",
+    "title": "Good Kid, M.A.A.D City",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/48628c6af67db437b0b9ff156b2c1085.jpg"
+  },
+  {
+    "artist": "Kendrick Lamar",
+    "title": "Mr. Morale & the Big Steppers",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/98050f67524ffee7af6edd314b767ac4.png"
+  },
+  {
+    "artist": "LCD Soundsystem",
+    "title": "Sound of Silver",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/62e79d7331b34ea9ced494570a2fe797.png"
+  },
+  {
+    "artist": "LCD Soundsystem",
+    "title": "This Is Happening",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/820b80a823f8487089e4f9564750e16e.png"
+  },
+  {
+    "artist": "Lil Peep",
+    "title": "Lil Peep Part One",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a38a9b29f5a1f265ced3b71f14935fa6.png"
+  },
+  {
+    "artist": "Lil Ugly Mane",
+    "title": "Prelude to Panopticon: \"On Doing an Evil Deed Blues\"",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/73825848d23f475bbcecb6197951bd76.png"
+  },
+  {
+    "artist": "Lil Ugly Mane",
+    "title": "Uneven Compromise",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/19c73a34bbdd4ac9832ef37812050edb.jpg"
+  },
+  {
+    "artist": "Little Simz",
+    "title": "Sometimes I Might Be Introvert",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/592ce13b8d7cfee26e13692b3c6985e8.jpg"
+  },
+  {
+    "artist": "Daniel Lopatin",
+    "title": "Marty Supreme",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7dc393d142dc601a15199d605e0e5ff2.jpg"
+  },
+  {
+    "artist": "LUCKI",
+    "title": "Days Be4 Storm",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7583abfeb5f0a155b409ef979a42b01d.jpg"
+  },
+  {
+    "artist": "LUCKI",
+    "title": "Watch My Back",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c070a451dc684f59a1be1232b9ef67ce.jpg"
+  },
+  {
+    "artist": "Madvillain",
+    "title": "Madvillainy",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/893fce336634c600b2bab31de7bbc9bd.jpg"
+  },
+  {
+    "artist": "Magdalena Bay",
+    "title": "Imaginal Disk",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0787b4f6e2086c763482254d375b17f0.png"
+  },
+  {
+    "artist": "Magdalena Bay",
+    "title": "Mercurial World",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c1b18f7dd5f2b262a96288bfa2330ad2.jpg"
+  },
+  {
+    "artist": "Malibu & Femi",
+    "title": "United in Flames 12/10/2017",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/4275fdf9d4bc6c606b61a7202e525c05.jpg"
+  },
+  {
+    "artist": "Massive Attack",
+    "title": "Mezzanine",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d1b2eab14337cbe47cc473b422625788.jpg"
+  },
+  {
+    "artist": "MIKE & Tony Seltzer",
+    "title": "Pinball",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a14c350f1dc6d91d805ff8f398f2bc76.jpg"
+  },
+  {
+    "artist": "Mac Miller",
+    "title": "Faces",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3f89941ec562d9ac91b1ff3da1efaa94.jpg"
+  },
+  {
+    "artist": "Mos Def",
+    "title": "Black on Both Sides",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/12098b07c2774f8ccf8fa2f7b5b832e3.jpg"
+  },
+  {
+    "artist": "my bloody valentine",
+    "title": "Loveless",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/510546e3b6df7504392274c528c77780.jpg"
+  },
+  {
+    "artist": "Naked Flames",
+    "title": "Miracle in Transit",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a354bac02fd4bd937305ec1d3a85e792.jpg"
+  },
+  {
+    "artist": "Nas",
+    "title": "Illmatic",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8dce63c224a643b78b39caeb27aadf8b.png"
+  },
+  {
+    "artist": "The Notorious B.I.G.",
+    "title": "Ready to Die",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/30d08ef0c53a4f6ea7c323b086a7b5ed.png"
+  },
+  {
+    "artist": "Nujabes",
+    "title": "Modal Soul",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e605e0031a208775b7ac76f8c34290e3.jpg"
+  },
+  {
+    "artist": "Nujabes / Fat Jon",
+    "title": "Samurai Champloo Music Record: Departure",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/00f8b8b59f694a2fb4907ba967f8c252.jpg"
+  },
+  {
+    "artist": "Nujabes feat. Shing02",
+    "title": "Luv(sic) Hexalogy",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/e2729ae0617d854adb30b54a5cf2265b.jpg"
+  },
+  {
+    "artist": "Frank Ocean",
+    "title": "Endless",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/eaf383f66732ea6907c5ffd524296883.png"
+  },
+  {
+    "artist": "Pink Floyd",
+    "title": "The Dark Side of the Moon",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d4bdd038cacbec705e269edb0fd38419.png"
+  },
+  {
+    "artist": "Portishead",
+    "title": "Dummy",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/29f72d0333df4193981b5ff16dd37df6.png"
+  },
+  {
+    "artist": "Radiohead",
+    "title": "Kid A",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/2ed343318c844d19cd897ec67fad11c4.png"
+  },
+  {
+    "artist": "Rx Papi & Gud",
+    "title": "Foreign Exchange",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/afc010a9f6996c5a41dd661a036e0156.jpg"
+  },
+  {
+    "artist": "samlrc",
+    "title": "A Lonely Sinner",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/110bb49dd64d37ce8eeaf268d52d559a.png"
+  },
+  {
+    "artist": "ScHoolboy Q",
+    "title": "Blank Face LP",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/a17c8048f24d878710d2e47dd474e2b0.jpg"
+  },
+  {
+    "artist": "Travis Scott",
+    "title": "Rodeo",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8094bc29edd6d557546a5ff997197ee6.png"
+  },
+  {
+    "artist": "Sewerslvt",
+    "title": "Suffering From Melancholia EP",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7b3c29f87780f5d73549ca4e3cc795b6.png"
+  },
+  {
+    "artist": "Sewerslvt",
+    "title": "We Had Good Times Together, Don't Forget That",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c04b2abd0f8ae72b1ccdcdc37459050c.png"
+  },
+  {
+    "artist": "Sigur Rós",
+    "title": "Ágætis byrjun",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/82ea4f4b490b4e288c9247e2b4ecb58c.png"
+  },
+  {
+    "artist": "Slowdive",
+    "title": "Souvlaki",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/306e566d3bb7cce540dd41d7e6811556.jpg"
+  },
+  {
+    "artist": "Smarki Smark",
+    "title": "Najebawszy",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/04054ccaa4fc40f3908f0c3e14268cd5.jpg"
+  },
+  {
+    "artist": "SOPHIE",
+    "title": "Product",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/564d9bea5bb533071e757d0b116af2f6.png"
+  },
+  {
+    "artist": "SpaceGhostPurrp AKA Purrple Haze",
+    "title": "Blackland Radio 666: Pt. 2 - Episode 1",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/7857ea03786bed51979a8de5b9c1668e.jpg"
+  },
+  {
+    "artist": "Rome Streetz",
+    "title": "Kiss the Ring",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ccf7389672cf276cf6c26e30b33ef5c0.jpg"
+  },
+  {
+    "artist": "Sweet Trip",
+    "title": "Velocity : Design : Comfort.",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/718b055f9ef5187f5a972dd541381230.jpg"
+  },
+  {
+    "artist": "Syzy",
+    "title": "The Weight of the World",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/b036726d4449dcae08096db3b1fe3893.png"
+  },
+  {
+    "artist": "Talking Heads",
+    "title": "Remain in Light",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/909484b931449e8fc2e4fecca90b7eb5.png"
+  },
+  {
+    "artist": "Thaiboy Digital",
+    "title": "ส",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/638c9a029af345e3c5d120be307aecf0.jpg"
+  },
+  {
+    "artist": "Triple Six Mafia",
+    "title": "Underground Vol. 1",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/af7fae4a815ad52aa255038a632deadd.jpg"
+  },
+  {
+    "artist": "Tyler, The Creator",
+    "title": "Flower Boy",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/52a7f32bdc99238080b0f17e859b3b4d.jpg"
+  },
+  {
+    "artist": "Vangelis",
+    "title": "Blade Runner",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ac4c22ca6ea0af702b1385bda45823b6.jpg"
+  },
+  {
+    "artist": "Various Artists",
+    "title": "Hydeout Productions 2nd Collection",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3d7fe6373d8d611f2d1a970e77e2a4db.jpg"
+  },
+  {
+    "artist": "Jessie Ware",
+    "title": "What's Your Pleasure?",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/501f8aaeaffe46ff586df7806847a3a7.png"
+  },
+  {
+    "artist": "Kamasi Washington",
+    "title": "Fearless Movement",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/357674ba00e83e21f4a0d2eb2204cd1d.png"
+  },
+  {
+    "artist": "The Weeknd",
+    "title": "House of Balloons",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/0a4a56348b554fbcbdf81193bfc455ad.png"
+  },
+  {
+    "artist": "The Weeknd",
+    "title": "Trilogy",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/420479ebfa2c11e0c9310d2183854446.jpg"
+  },
+  {
+    "artist": "Kanye West",
+    "title": "Graduation",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8ddd1959a2bef460a5149b3e0cf5e18a.png"
+  },
+  {
+    "artist": "Kanye West",
+    "title": "Late Registration",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/9c0e7886d750a519c9ec63c30434b483.png"
+  },
+  {
+    "artist": "Kanye West",
+    "title": "My Beautiful Dark Twisted Fantasy",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8a071c4b073625018de5f0ac58727511.png"
+  },
+  {
+    "artist": "Kanye West",
+    "title": "The College Dropout",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/61d5e94c9aa712b29e283325bc5ae87f.jpg"
+  },
+  {
+    "artist": "Kanye West",
+    "title": "The Life of Pablo",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/8c6af1315c66631bad022085c7992b34.jpg"
+  },
+  {
+    "artist": "Weyes Blood",
+    "title": "Titanic Rising",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/463b22f2004e52c747f0ca1607860e5f.png"
+  },
+  {
+    "artist": "what is your name?",
+    "title": "The Now Now and Never",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/45fd19c08ee3ec2d3a6df97147856643.png"
+  },
+  {
+    "artist": "Yung Lean",
+    "title": "Unknown Memory",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c59d6ae50224472ac772913be4feb1e1.jpg"
+  },
+  {
+    "artist": "Yung Lean",
+    "title": "Warlord",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/ff74d75278ea940a74c3e3e182d8fd58.jpg"
+  },
+  {
+    "artist": "АЛ-90",
+    "title": "КОД-915913",
+    "rating": 9,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/d3318ecbdcac459cc5d5a391cc39090a.jpg"
+  },
+  {
+    "artist": "Akira Yamaoka",
+    "title": "Silent Hill 2",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/6e06ecccaf48fb45be86a51f8c4864e7.png"
+  },
+  {
+    "artist": "Masayoshi Minoshima",
+    "title": "Bad Apple!!",
+    "rating": 10,
+    "coverUrl": "https://lastfm-img.freetls.fastly.net/i/u/300x300/96f5ccfdfbc0adf51f6ccea6efb92954.jpg"
+  }
+]

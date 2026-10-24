@@ -1,0 +1,13 @@
+---
+import type { PortfolioProject } from "../data/projects";
+type Props = PortfolioProject;
+const { title, type, typeKey, href, number, wip } = Astro.props;
+---
+
+<a class="project-mini" href={href} target="_blank" rel="noreferrer">
+  <div class="project-mini-copy">
+    <span class="project-mini-year">{number}{wip && " · WIP"}</span>
+    <h3>{title}</h3>
+    <p data-i18n={typeKey}>{type}</p>
+  </div>
+</a>

@@ -2681,19 +2681,40 @@ h1.is-swapping > * {
     filter: none;
   }
 
+  /* the two pills are a pair: same height, each sized to its own content
+     instead of stretched to a share of the row */
+  .control-cluster {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .control-cluster > .mode-switch,
+  .control-cluster > .utility-pill {
+    flex: 0 1 auto;
+    min-height: 44px;
+    padding-block: 4px;
+  }
+
+  .mode-switch {
+    gap: 2px;
+    padding-inline: 5px;
+  }
+
+  /* the inactive label is blurred, so it needs room before the rounded edge */
+  .mode-button {
+    padding-inline: 10px;
+  }
+
   .utility-pill {
-    gap: 14px;
-    padding-inline: 16px;
+    gap: 13px;
+    padding-inline: 12px;
   }
 
   .utility-pill .contact-link {
     gap: 5px;
     padding-inline: 4px;
     font-size: 10px;
-  }
-
-  .mode-button {
-    padding-inline: 10px;
   }
 }
 

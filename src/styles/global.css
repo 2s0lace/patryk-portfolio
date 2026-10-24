@@ -2681,24 +2681,30 @@ h1.is-swapping > * {
     filter: none;
   }
 
-  /* the two pills are a pair: same height, each sized to its own content
-     instead of stretched to a share of the row */
+  /* the pills stay side by side and share the row: the mode switch is the
+     short, chunky one, the utility pill the long one */
   .control-cluster {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
     gap: 8px;
   }
 
-  .control-cluster > .mode-switch,
+  .control-cluster > .mode-switch {
+    flex: 1 1 36%;
+    min-height: 48px;
+    padding-block: 5px;
+  }
+
   .control-cluster > .utility-pill {
-    flex: 0 1 auto;
-    min-height: 44px;
+    flex: 1 1 64%;
+    min-height: 42px;
     padding-block: 4px;
   }
 
   .mode-switch {
     gap: 2px;
-    padding-inline: 5px;
+    padding-inline: 4px;
   }
 
   /* the inactive label is blurred, so it needs room before the rounded edge */
@@ -2715,6 +2721,31 @@ h1.is-swapping > * {
     gap: 5px;
     padding-inline: 4px;
     font-size: 10px;
+  }
+}
+
+/* Under 360px the pair still shares one row, so the type and the padding
+   step down once more instead of letting a label run under the pill edge. */
+@media (max-width: 360px) {
+  .control-cluster {
+    gap: 6px;
+  }
+
+  .mode-button {
+    padding-inline: 6px;
+    font-size: 9px;
+  }
+
+  .utility-pill {
+    gap: 9px;
+    padding-inline: 9px;
+  }
+
+  .utility-pill .theme-option,
+  .utility-pill .locale-button,
+  .utility-pill .contact-link {
+    padding-inline: 3px;
+    font-size: 9px;
   }
 }
 

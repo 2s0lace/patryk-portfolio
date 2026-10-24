@@ -2677,7 +2677,7 @@ h1.is-swapping > * {
 
   .utility-pill .theme-option,
   .utility-pill .locale-button {
-    padding-inline: 5px;
+    padding-inline: 4px;
     font-size: 10px;
   }
 
@@ -2691,13 +2691,13 @@ h1.is-swapping > * {
   }
 
   .control-cluster > .mode-switch {
-    flex: 1 1 36%;
+    flex: 1 1 46%;
     min-height: 48px;
     padding-block: 5px;
   }
 
   .control-cluster > .utility-pill {
-    flex: 1 1 64%;
+    flex: 1 1 54%;
     min-height: 42px;
     padding-block: 4px;
   }
@@ -2713,8 +2713,8 @@ h1.is-swapping > * {
   }
 
   .utility-pill {
-    gap: 13px;
-    padding-inline: 12px;
+    gap: 10px;
+    padding-inline: 10px;
   }
 
   .utility-pill .contact-link {
@@ -2729,6 +2729,15 @@ h1.is-swapping > * {
 @media (max-width: 360px) {
   .control-cluster {
     gap: 6px;
+  }
+
+  /* the labels on the right need a little of the share back at this width */
+  .control-cluster > .mode-switch {
+    flex-basis: 42%;
+  }
+
+  .control-cluster > .utility-pill {
+    flex-basis: 58%;
   }
 
   .mode-button {

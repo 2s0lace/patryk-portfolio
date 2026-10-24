@@ -1,0 +1,299 @@
+---
+import rymCovers from "../data/rym-covers.json";
+
+interface RymCover {
+  artist: string;
+  title: string;
+  rating: number;
+  coverUrl: string;
+}
+
+const shuffle = <T,>(items: T[]) => [...items].sort(() => Math.random() - 0.5);
+const covers = rymCovers as RymCover[];
+const ratingTen = shuffle(covers.filter((cover) => cover.rating === 10)).slice(0, 3);
+const ratingNine = shuffle(covers.filter((cover) => cover.rating === 9)).slice(0, 6);
+const selectedRymCovers = [...ratingTen, ...ratingNine];
+
+if (selectedRymCovers.length < 9) {
+  const selectedKeys = new Set(selectedRymCovers.map((cover) => `${cover.artist}\u0000${cover.title}`));
+  const fallback = shuffle(
+    covers.filter((cover) => !selectedKeys.has(`${cover.artist}\u0000${cover.title}`)),
+  );
+  selectedRymCovers.push(...fallback.slice(0, 9 - selectedRymCovers.length));
+}
+
+const rymSlots = Array.from({ length: 9 }, (_, index) => selectedRymCovers[index] ?? null);
+---
+
+<div class="topster-modal" id="topster-modal" aria-hidden="true" hidden>
+  <div
+    class="topster-dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="topster-modal-title"
+  >
+    <div class="topster-header">
+      <div>
+        <h2 class="visually-hidden" id="topster-modal-title" data-i18n="common.topsterTitle">Topster.</h2>
+      </div>
+      <button
+        class="topster-close"
+        type="button"
+        aria-label="Close music grids"
+        data-i18n-attr="aria-label:common.topsterClose"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="topster-columns">
+      <section class="topster-column" aria-labelledby="topster-lastfm-label">
+        <p class="visually-hidden" id="topster-lastfm-label" data-i18n="common.topsterLast30Days">
+          last 30 days
+        </p>
+        <div class="topster-grid" id="topster-lastfm-grid" aria-live="polite">
+          {Array.from({ length: 9 }).map(() => (
+            <div class="topster-cell topster-skeleton" aria-hidden="true"></div>
+          ))}
+        </div>
+        <p class="topster-status" id="topster-lastfm-status" role="status" data-i18n="common.topsterLoading">
+          loading Last.fm
+        </p>
+      </section>
+
+      <section class="topster-column" aria-labelledby="topster-rym-label">
+        <p class="visually-hidden" id="topster-rym-label" data-i18n="common.topsterFavourites">
+          favourites
+        </p>
+        <div class="topster-grid" id="topster-rym-grid">
+          {rymSlots.map((cover) => (
+            <figure
+              class:list={["topster-cell", !cover && "topster-cell-empty"]}
+              data-cover-url={cover?.coverUrl}
+              data-artist={cover?.artist}
+              data-title={cover?.title}
+              data-rating={cover?.rating}
+            >
+              {cover ? (
+                <>
+                  <img
+                    class="topster-cover"
+                    data-src={cover.coverUrl}
+                    alt={`${cover.artist} — ${cover.title}`}
+                    decoding="async"
+                  />
+                  <figcaption class="topster-cell-caption">
+                    <strong class="topster-cell-title">{cover.title}</strong>
+                  </figcaption>
+                </>
+              ) : (
+                <span class="topster-placeholder" data-i18n="common.topsterNoCover">no cover</span>
+              )}
+            </figure>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const modal = document.querySelector("#topster-modal");
+    const triggers = [...document.querySelectorAll("[data-music-grid]")];
+    const closeButton = modal?.querySelector(".topster-close");
+    const columns = modal?.querySelector(".topster-columns");
+    const lastFmColumn = modal?.querySelector("[aria-labelledby='topster-lastfm-label']");
+    const rymColumn = modal?.querySelector("[aria-labelledby='topster-rym-label']");
+    const lastFmGrid = modal?.querySelector("#topster-lastfm-grid");
+    const lastFmStatus = modal?.querySelector("#topster-lastfm-status");
+    const rymGrid = modal?.querySelector("#topster-rym-grid");
+
+    if (!modal || !triggers.length || !closeButton || !columns || !lastFmColumn || !rymColumn || !lastFmGrid || !lastFmStatus || !rymGrid) return;
+
+    let previousFocus;
+    let lastFmRequest;
+
+    const statusCopy = {
+      en: {
+        loading: "loading Last.fm",
+        loaded: "updated from Last.fm",
+        empty: "no Last.fm albums found",
+        error: "Last.fm is unavailable right now",
+        noCover: "no cover",
+      },
+      pl: {
+        loading: "ładuję Last.fm",
+        loaded: "zaktualizowano z Last.fm",
+        empty: "brak albumów Last.fm",
+        error: "Last.fm jest teraz niedostępne",
+        noCover: "brak okładki",
+      },
+    };
+
+    const copy = () => statusCopy[document.documentElement.lang === "en" ? "en" : "pl"];
+    const setStatus = (message) => {
+      lastFmStatus.removeAttribute("data-i18n");
+      lastFmStatus.textContent = message;
+    };
+
+    const isUsableCover = (url) => {
+      const normalized = String(url || "").toLowerCase();
+      return Boolean(
+        /^https?:\/\//.test(url || "") &&
+          !normalized.includes("2a96cbd8b46e442fc41c2b86b821562f") &&
+          !normalized.includes("default_album") &&
+          !normalized.includes("noimage"),
+      );
+    };
+
+    const getFocusable = () =>
+      [...modal.querySelectorAll("button:not([disabled]), a[href], input:not([disabled]), [tabindex]:not([tabindex='-1'])")]
+        .filter((element) => !element.hidden && element.getClientRects().length > 0);
+
+    const createCell = (item) => {
+      const cell = document.createElement("figure");
+      cell.className = "topster-cell";
+      const artist = String(item?.artist || "Unknown artist");
+      const title = String(item?.title || "Untitled album");
+      cell.setAttribute("aria-label", `${artist} — ${title}`);
+
+      if (isUsableCover(item?.coverUrl)) {
+        const image = document.createElement("img");
+        image.className = "topster-cover";
+        image.src = item.coverUrl;
+        image.alt = `${artist} — ${title}`;
+        image.loading = "lazy";
+        image.decoding = "async";
+        cell.append(image);
+      } else {
+        cell.classList.add("topster-cell-empty");
+        const placeholder = document.createElement("span");
+        placeholder.className = "topster-placeholder";
+        placeholder.textContent = copy().noCover;
+        cell.append(placeholder);
+      }
+
+      const caption = document.createElement("figcaption");
+      caption.className = "topster-cell-caption";
+      const titleLine = document.createElement("span");
+      titleLine.className = "topster-cell-title";
+      titleLine.textContent = title;
+      caption.append(titleLine);
+      cell.append(caption);
+
+      return cell;
+    };
+
+    const renderLastFm = (albums) => {
+      lastFmGrid.replaceChildren();
+      const items = Array.isArray(albums) ? albums.slice(0, 9) : [];
+      items.forEach((item) => lastFmGrid.append(createCell(item)));
+
+      for (let index = items.length; index < 9; index += 1) {
+        const emptyCell = document.createElement("figure");
+        emptyCell.className = "topster-cell topster-cell-empty";
+        const placeholder = document.createElement("span");
+        placeholder.className = "topster-placeholder";
+        placeholder.textContent = copy().noCover;
+        emptyCell.append(placeholder);
+        lastFmGrid.append(emptyCell);
+      }
+
+      setStatus(items.length ? copy().loaded : copy().empty);
+    };
+
+    const renderError = () => {
+      lastFmGrid.replaceChildren();
+      for (let index = 0; index < 9; index += 1) {
+        const emptyCell = document.createElement("figure");
+        emptyCell.className = "topster-cell topster-cell-empty";
+        const placeholder = document.createElement("span");
+        placeholder.className = "topster-placeholder";
+        placeholder.textContent = copy().noCover;
+        emptyCell.append(placeholder);
+        lastFmGrid.append(emptyCell);
+      }
+      setStatus(copy().error);
+    };
+
+    const hydrateRym = () => {
+      rymGrid.querySelectorAll(".topster-cover[data-src]").forEach((image) => {
+        if (!image.getAttribute("src")) image.setAttribute("src", image.dataset.src);
+      });
+    };
+
+    const setActiveGrid = (grid) => {
+      const activeGrid = grid === "lastfm" ? "lastfm" : "rym";
+      const showLastFm = activeGrid === "lastfm";
+      lastFmColumn.hidden = !showLastFm;
+      rymColumn.hidden = showLastFm;
+      lastFmColumn.setAttribute("aria-hidden", String(!showLastFm));
+      rymColumn.setAttribute("aria-hidden", String(showLastFm));
+      columns.classList.add("is-single");
+    };
+
+    const loadLastFm = () => {
+      if (lastFmRequest) return lastFmRequest;
+      setStatus(copy().loading);
+      lastFmRequest = fetch("/api/lastfm-grid.json")
+        .then((response) => {
+          if (!response.ok) throw new Error("Last.fm request failed");
+          return response.json();
+        })
+        .then(renderLastFm)
+        .catch(renderError);
+      return lastFmRequest;
+    };
+
+    const close = () => {
+      modal.hidden = true;
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("topster-open");
+      triggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
+      previousFocus?.focus?.();
+    };
+
+    const open = (grid, trigger) => {
+      previousFocus = trigger || document.activeElement;
+      modal.hidden = false;
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("topster-open");
+      triggers.forEach((item) => item.setAttribute("aria-expanded", String(item === trigger)));
+      setActiveGrid(grid);
+      if (grid === "lastfm") loadLastFm();
+      else hydrateRym();
+      closeButton.focus();
+    };
+
+    triggers.forEach((trigger) => {
+      trigger.setAttribute("aria-expanded", "false");
+      trigger.addEventListener("click", () => open(trigger.dataset.musicGrid, trigger));
+    });
+    closeButton.addEventListener("click", close);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (modal.hidden) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        close();
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const focusable = getFocusable();
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+  })();
+</script>

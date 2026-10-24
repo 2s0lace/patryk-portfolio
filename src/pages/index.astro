@@ -2,13 +2,22 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import LocaleSwitch from "../components/LocaleSwitch.astro";
 import ModeSwitch from "../components/ModeSwitch.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import ProjectMini from "../components/ProjectMini.astro";
+import "../styles/structure-preview.css";
 import SectionPicker from "../components/SectionPicker.astro";
 import SocialLinks from "../components/SocialLinks.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
+import AboutBio from "../components/AboutBio.astro";
+import { patrykProjects, solaceProjects, githubProjects } from "../data/projects";
+
+interface Props {
+  initialMode?: "patryk" | "2s0lace";
+}
+
+const { initialMode = "patryk" } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout mode={initialMode}>
   <div class="site-shell">
     <header class="topbar">
       <div class="topbar-main">
@@ -30,66 +39,16 @@ import ThemeToggle from "../components/ThemeToggle.astro";
     </header>
 
     <main id="top">
+      <div class="landing-stage">
       <section class="hero" id="section-1" data-section="section1" aria-labelledby="hero-title">
+        <div class="hero-identity">
         <p class="availability-status" data-i18n-attr="aria-label:common.statusLabel">
           <span class="availability-pulse" aria-hidden="true"></span>
           <span data-i18n="common.openToWork">otwarty na projekty</span>
         </p>
         <h1 id="hero-title">
-          <span data-i18n="heroHeadline">[ˈpatrɨk]</span>
+          <span data-i18n="heroHeadline" data-i18n-ipa>[<span class="ipa-glyph">ˈ</span>patr<span class="ipa-glyph">ɨ</span>k]</span>
         </h1>
-        <div class="hero-comparison">
-          <div class="comparison-item">
-            <p class="comparison-year">2014</p>
-            <div class="comparison-copy">
-              <p class="comparison-title" data-i18n="comparisonEarlyTitle">
-                MIĘDZYSZKOLNY KONKURS GRAFIKI KOMPUTEROWEJ
-              </p>
-              <p class="comparison-event">
-                <strong data-i18n="comparisonEarlyEvent">"MYSZKĄ MALOWANE"</strong>
-              </p>
-              <a
-                class="source-pill"
-                href="http://www.psp4.radom.pl/webs/sukcesy20142015/myszkamalowane15.htm"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span data-i18n="comparisonSource">źródło</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="comparison-item comparison-latest">
-            <p class="comparison-year">2022—2026</p>
-            <div class="comparison-copy">
-              <p class="comparison-title" data-i18n="comparisonCurrentLabel">maksymalny zasięg:</p>
-              <p class="comparison-event">
-                <strong data-i18n="comparisonCurrentValue">8M+ i 4M+ wyświetleń</strong>
-                <span class="comparison-platform-inline" data-i18n="comparisonCurrentPlatform">@ TikTok</span>
-              </p>
-              <div class="comparison-sources">
-                <a
-                  class="source-pill"
-                  href="https://www.tiktok.com/@oppopoland/video/7675669840618605857"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span data-i18n="comparisonTikTokSource">źródło</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a
-                  class="source-pill"
-                  href="https://www.tiktok.com/@oppopoland/video/7677598965516274976"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span data-i18n="comparisonTikTokSource">źródło</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -98,6 +57,100 @@ import ThemeToggle from "../components/ThemeToggle.astro";
         <span class="mode-toast-dot" aria-hidden="true"></span>
         <span data-i18n="common.checkPatryk">Sprawdź tryb Patryk</span>
       </p>
+      </div>
+
+      <section
+        class="selected-work"
+        id="section-6"
+        data-section="section6"
+        aria-labelledby="work-title"
+      >
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="portfolioKicker">01 / portfolio</p>
+          <h2 id="work-title" data-i18n="workTitle">Wybrane projekty.</h2>
+        </div>
+
+        <div class="work-collection" data-mode-only="patryk" hidden={initialMode !== "patryk"}>
+          <div class="project-mini-grid">{[...patrykProjects, ...githubProjects].map((project) => <ProjectMini {...project} />)}</div>
+          <div class="portfolio-link-pills">
+          <a class="portfolio-more" href="https://www.behance.net/2s0lace" target="_blank" rel="noreferrer">
+            <span data-i18n="portfolioMorePatryk">Więcej case studies na Behance</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="portfolio-more" href="https://github.com/2s0lace" target="_blank" rel="noreferrer">
+            <span data-i18n="common.portfolioMoreGithub">Więcej projektów na GitHubie</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          </div>
+        </div>
+
+        <div class="work-collection" data-mode-only="2s0lace" hidden={initialMode !== "2s0lace"}>
+          <div class="project-mini-grid">{solaceProjects.map((project) => <ProjectMini {...project} />)}</div>
+          <a class="portfolio-more" href="https://www.instagram.com/2s0lace/" target="_blank" rel="noreferrer">
+            <span data-i18n="portfolioMoreSolace">Więcej prac na Instagramie</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="statement"
+        id="section-3"
+        data-section="section3"
+        aria-labelledby="about-title"
+      >
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="aboutKicker">03 / o mnie</p>
+          <h2 id="about-title" data-i18n="aboutTitle">O mnie.</h2>
+          <p class="about-ai-joke" data-mode-only="2s0lace" hidden data-i18n="aboutAiJoke">
+            (jk, please see portfolio)
+          </p>
+        </div>
+
+        <AboutBio />
+        <div class="ai-chat" id="ai-chat" data-mode-only="2s0lace" hidden>
+          <div class="ai-chat-form">
+            <label class="visually-hidden" for="ai-chat-input" data-i18n="aboutAiPromptLabel">
+              Ask about 2s0lace on Instagram
+            </label>
+            <input
+              class="ai-chat-input"
+              id="ai-chat-input"
+              type="text"
+              value="hoo is 2s0lace instegrem"
+              readonly
+              aria-readonly="true"
+              data-i18n-attr="value:aboutAiPrompt"
+            />
+            <button
+              class="ai-chat-send"
+              type="button"
+              id="ai-chat-send"
+              aria-controls="ai-chat-output"
+              aria-expanded="false"
+              data-i18n-attr="aria-label:aboutAiSendLabel"
+              aria-label="Send message"
+            >
+              <span data-i18n="common.send">Wyślij</span>
+            </button>
+          </div>
+
+          <div class="ai-chat-output" id="ai-chat-output" aria-live="polite" hidden>
+            <p class="ai-chat-response" id="ai-chat-response" data-i18n="aboutAiResponse" hidden>
+              2s0lace is an independent graphic design and multimedia art project. It combines poster, motion and the atmosphere of electronic music into short, personal moments.
+            </p>
+            <p class="ai-chat-thinking" id="ai-chat-thinking" role="status">
+              <span class="ai-chat-diamond" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </span>
+              <span class="ai-chat-shimmer" id="ai-chat-status" data-i18n="aboutAiThinking">Thinking</span>
+            </p>
+          </div>
+        </div>
+
+
+      </section>
 
       <section
         class="info-section"
@@ -106,7 +159,7 @@ import ThemeToggle from "../components/ThemeToggle.astro";
         aria-labelledby="cv-title"
       >
         <div class="section-heading">
-          <p class="section-kicker" data-i18n="cvKicker">01 / cv</p>
+          <p class="section-kicker" data-i18n="cvKicker">02 / cv</p>
           <h2 id="cv-title" data-i18n="cvTitle">CV.</h2>
         </div>
 
@@ -121,7 +174,8 @@ import ThemeToggle from "../components/ThemeToggle.astro";
               <ul class="cv-bullets">
                 <li data-i18n="cvJmoBulletOne">Projektowanie key visuali, materiałów POSM i banerów e-commerce (Allegro, sklepy partnerskie) dla premier produktowych OPPO na rynek polski</li>
                 <li data-i18n="cvJmoBulletTwo">Adaptacja i lokalizacja globalnych materiałów kampanijnych — KV, DTP, assety produktowe</li>
-                <li data-i18n="cvJmoBulletThree">Montaż i postprodukcja materiałów na social media — dwa filmy kampanii Reno16 5G z wynikiem 8M+ i 4M+ wyświetleń</li>
+                <li data-i18n="cvJmoVideoLocalization">Lokalizacja materiałów wideo OPPO na rynek polski — tłumaczenie, adaptacja tekstów ekranowych i napisy</li>
+                <li data-i18n="cvJmoBulletThree">Montaż i postprodukcja materiałów na social media — dwa filmy kampanii Reno16 5G z wynikiem 8,4M i 11,4M wyświetleń</li>
                 <li data-i18n="cvJmoBulletFour">Animacja assetów wektorowych i grafika ruchoma w After Effects</li>
               </ul>
             </div>
@@ -159,247 +213,13 @@ import ThemeToggle from "../components/ThemeToggle.astro";
       </section>
 
       <section
-        class="statement"
-        id="section-3"
-        data-section="section3"
-        aria-labelledby="about-title"
-      >
-        <div class="why-design" data-mode-only="patryk">
-          <p data-i18n="whyDesignCopy">
-            Why graphic design? Because I wanted to show my old graphic design teacher I will amount to something. The 2s0lace project began in 2020 following boring school homework.
-          </p>
-          <p>
-            <span data-i18n="musicReason">Did I try to make music? Yes, but this wasn't for me.</span><br />
-            <span data-i18n="musicDecision">I eventually decided to be the sole observer.</span>
-          </p>
-          <div class="music-links" aria-label="Music links">
-            <a class="music-link-placeholder" href="https://rateyourmusic.com/~patr" target="_blank" rel="noreferrer" data-i18n="musicFaves">faves</a>
-            <a class="music-link-placeholder" href="https://www.last.fm/user/brockpatron" target="_blank" rel="noreferrer" data-i18n="musicMostListened">most listened</a>
-            <a class="music-link-placeholder" href="https://rateyourmusic.com/~patr" target="_blank" rel="noreferrer" data-i18n="musicRym">rym</a>
-            <a class="music-link-placeholder" href="https://www.last.fm/user/brockpatron" target="_blank" rel="noreferrer" data-i18n="musicLastfm">lastfm</a>
-          </div>
-        </div>
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="aboutKicker">02 / o mnie</p>
-          <h2 id="about-title" data-i18n="aboutTitle">O mnie.</h2>
-          <p class="about-ai-joke" data-mode-only="2s0lace" hidden data-i18n="aboutAiJoke">
-            (jk, please see portfolio)
-          </p>
-        </div>
-        <div class="about-list" data-mode-only="patryk">
-          <div class="about-list-row about-interests-row">
-            <p class="about-list-label" data-i18n="aboutInterestsLabel">Zainteresowania</p>
-            <ul class="about-list-values about-interests-values">
-              <li data-i18n="aboutInterestOne">Interfejsy i grafika (had to be done)</li>
-              <li data-i18n="aboutInterestTwo">AI, LLM (stale śledzę i prowadzę prywatne badania)</li>
-              <li data-i18n="aboutInterestThree">Sprzęt elektroniczny</li>
-              <li data-i18n="aboutInterestFour">Muzyka</li>
-              <li data-i18n="aboutInterestFive">Dialekty języka angielskiego (mówię amerykańskim, potrafię brytyjskim)</li>
-              <li data-i18n="aboutInterestSix">Gry komputerowe</li>
-              <li data-i18n="aboutInterestSeven">Koty</li>
-              <li data-i18n="aboutInterestEight">Cybersecurity</li>
-              <li data-i18n="aboutInterestNine">Nauczanie</li>
-            </ul>
-          </div>
-
-          <div class="about-list-row">
-            <p class="about-list-label" data-i18n="aboutInspirationsLabel">Inspiracje</p>
-            <ul class="about-list-values">
-              <li data-i18n="aboutInspirationOne">Nothing</li>
-              <li data-i18n="aboutInspirationTwo">A Cold Wall</li>
-              <li data-i18n="aboutInspirationThree">Teenage Engineering</li>
-              <li data-i18n="aboutInspirationFour">Yeezy</li>
-              <li data-i18n="aboutInspirationFive">Google Pixel</li>
-            </ul>
-          </div>
-
-          <div class="about-list-row">
-            <p class="about-list-label" data-i18n="aboutPhonesLabel">Telefony</p>
-            <ul class="about-list-values">
-              <li class="about-category" data-i18n="aboutCurrentPhoneLabel">Current phone</li>
-              <li class="about-value about-current-value">OPPO Find X9 Pro</li>
-              <li class="about-value">Samsung Wave 533</li>
-              <li class="about-value">Sony Ericsson Xperia Neo V</li>
-              <li class="about-value">Sony Xperia Z</li>
-              <li class="about-value">Huawei Mate 10 Lite</li>
-              <li class="about-value">Motorola G8 Power</li>
-              <li class="about-value">iPhone 12 Pro</li>
-            </ul>
-          </div>
-
-          <div class="about-list-row">
-            <p class="about-list-label" data-i18n="aboutHeadphonesLabel">Obecne słuchawki</p>
-            <ul class="about-list-values">
-              <li>Nothing Headphone (1)</li>
-              <li>Soundcore Liberty 4</li>
-              <li>Philips SHP8500 + Apple Dongle</li>
-            </ul>
-          </div>
-
-          <div class="about-list-row">
-            <p class="about-list-label" data-i18n="aboutComputerLabel">Obecny komputer</p>
-            <ul class="about-list-values">
-              <li class="about-category">
-                <span data-i18n="aboutLaptopLabel">Laptop</span>
-              </li>
-              <li class="about-value">MacBook M1 Air</li>
-              <li class="about-category">
-                <span data-i18n="aboutPersonalComputerLabel">Personal Computer</span>
-              </li>
-              <li class="about-value">AMD Ryzen 7 5700X</li>
-              <li>32GB DDR4</li>
-              <li>MSI B350 Gaming Pro Carbon</li>
-              <li>AMD Radeon RX 9060 XT Sapphire Pulse</li>
-              <li data-i18n="aboutComputerFans">Thermaltake CPU fan + jakieś losowe wentylatory z Morele.net</li>
-              <li>Phanteks Eclipse P300</li>
-              <li>SeaSonic 550W 80+ Gold</li>
-            </ul>
-          </div>
-
-          <div class="about-list-row">
-            <p class="about-list-label" data-i18n="aboutConcertsLabel">Koncerty</p>
-            <ul class="about-list-values">
-              <li>Kayo Dot (2023)</li>
-              <li>Cisnienie (2023, 2024)</li>
-              <li>Cpaj Stajl (2023)</li>
-              <li>Underscores (2023)</li>
-              <li>Godspeed You Black Emperor (2024)</li>
-              <li class="about-grid-spacer" aria-hidden="true"></li>
-              <li class="about-category" data-i18n="aboutConcertSoonLabel">SOON</li>
-              <li class="about-value about-concert-upcoming">
-                <span class="about-concert-name" data-i18n="aboutConcertSoonEvent">Tiffany Day (2026)</span>
-                <a
-                  class="source-pill"
-                  href="https://krajownik.pl/warszawa/wydarzenia/tiffany-day-official-event-26112026-hybrydy-warszawa-221492"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span data-i18n="aboutConcertSource">źródło</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="ai-chat" id="ai-chat" data-mode-only="2s0lace" hidden>
-          <div class="ai-chat-form">
-            <label class="visually-hidden" for="ai-chat-input" data-i18n="aboutAiPromptLabel">
-              Ask about 2s0lace on Instagram
-            </label>
-            <input
-              class="ai-chat-input"
-              id="ai-chat-input"
-              type="text"
-              value="hoo is 2s0lace instegrem"
-              readonly
-              aria-readonly="true"
-              data-i18n-attr="value:aboutAiPrompt"
-            />
-            <button
-              class="ai-chat-send"
-              type="button"
-              id="ai-chat-send"
-              aria-controls="ai-chat-output"
-              aria-expanded="false"
-              data-i18n-attr="aria-label:aboutAiSendLabel"
-              aria-label="Send message"
-            >
-              <span aria-hidden="true">↗</span>
-            </button>
-          </div>
-
-          <div class="ai-chat-output" id="ai-chat-output" aria-live="polite" hidden>
-            <p class="ai-chat-response" id="ai-chat-response" data-i18n="aboutAiResponse" hidden>
-              2s0lace is an independent graphic design and multimedia art project. It combines poster, motion and the atmosphere of electronic music into short, personal moments.
-            </p>
-            <p class="ai-chat-thinking" id="ai-chat-thinking" role="status">
-              <span class="ai-chat-diamond" aria-hidden="true">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-              </span>
-              <span class="ai-chat-shimmer" id="ai-chat-status" data-i18n="aboutAiThinking">Thinking</span>
-            </p>
-          </div>
-        </div>
-
-      </section>
-
-      <section
-        class="info-section"
-        id="section-4"
-        data-section="section4"
-        aria-labelledby="education-title"
-      >
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="educationKicker">03 / wykształcenie</p>
-          <h2 id="education-title" data-i18n="educationTitle">Wykształcenie.</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <p class="info-label" data-i18n="educationItemOneMeta">2025 — teraz</p>
-            <div>
-              <p class="info-value" data-i18n="educationItemOne">Cyberbezpieczeństwo @ Uniwersytet VIZJA</p>
-              <p class="info-note" data-i18n="educationItemOnePlace">lic.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <p class="info-label" data-i18n="educationItemTwoMeta">2021 — teraz</p>
-            <div>
-              <p class="info-value" data-i18n="educationItemTwo">Filologia angielska @ Uniwersytet Warszawski</p>
-              <p class="info-note" data-i18n="educationItemTwoPlace">lic.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="info-section"
-        id="section-5"
-        data-section="section5"
-        aria-labelledby="languages-title"
-      >
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="languagesKicker">04 / języki</p>
-          <h2 id="languages-title" data-i18n="languagesTitle">Języki.</h2>
-        </div>
-
-        <div class="language-grid">
-          <div class="language-card">
-            <span class="language-code">PL</span>
-            <span class="language-level" data-i18n="polishLevel">Native</span>
-          </div>
-          <div class="language-card">
-            <span class="language-code">EN</span>
-            <div class="language-detail">
-              <span class="language-level" data-i18n="englishLevel">C1</span>
-              <span class="language-note" data-i18n="englishEvidence">(UW, 2024 & FCE, 2017)</span>
-            </div>
-          </div>
-          <div class="language-card">
-            <span class="language-code">DE</span>
-            <span class="language-level" data-i18n="germanLevel">B1+</span>
-          </div>
-        </div>
-      </section>
-
-      <section
         class="info-section stack-section"
         id="section-stack"
         data-section="stack"
         aria-labelledby="stack-title"
       >
-        <div class="stack-intro">
-          <p data-i18n="stackIntro">
-            I've done graphic/motion design since I was a child, primarily inspired by the likes of emF3lipe and Polish YouTube thumbnail creators. In 2013, I made my first steps in GIMP and After Effects. The rest came naturally. I cannot imagine not doing anything creative further in life.
-          </p>
-          <span class="stack-results-placeholder" data-i18n="stackResultsPlaceholder">
-            Link to my results: [placeholder]
-          </span>
-        </div>
-
         <div class="section-heading">
-          <p class="section-kicker" data-i18n="stackKicker">05 / stack</p>
+          <p class="section-kicker" data-i18n="stackKicker">04 / stack</p>
           <h2 id="stack-title" data-i18n="stackTitle">Stack.</h2>
         </div>
 
@@ -454,32 +274,55 @@ import ThemeToggle from "../components/ThemeToggle.astro";
       </section>
 
       <section
-        class="selected-work"
-        id="section-6"
-        data-section="section6"
-        aria-labelledby="work-title"
+        class="info-section"
+        id="section-4"
+        data-section="section4"
+        aria-labelledby="education-title"
       >
         <div class="section-heading">
-          <p class="section-kicker" data-i18n="portfolioKicker">05 / portfolio</p>
-          <h2 id="work-title" data-i18n="workTitle">Wybrane projekty.</h2>
+          <p class="section-kicker" data-i18n="educationKicker">05 / wykształcenie</p>
+          <h2 id="education-title" data-i18n="educationTitle">Wykształcenie.</h2>
         </div>
 
-        <div class="work-grid">
-          <ProjectCard
-            number="01"
-            title="Forma / studio"
-            type="identyfikacja · web design"
-            theme="sand"
-            large
-          />
-          <ProjectCard
-            number="02"
-            title="Narrow / objects"
-            type="e-commerce · art direction"
-            theme="olive"
-          />
+        <div class="timeline">
+          <div class="timeline-item">
+            <p class="info-label" data-i18n="educationItemOneMeta">2025 — teraz</p>
+            <div>
+              <p class="info-value" data-i18n="educationItemOne">Cyberbezpieczeństwo @ Uniwersytet VIZJA</p>
+              <p class="info-note" data-i18n="educationItemOnePlace">lic.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <p class="info-label" data-i18n="educationItemTwoMeta">2021 — teraz</p>
+            <div>
+              <p class="info-value" data-i18n="educationItemTwo">Filologia angielska @ Uniwersytet Warszawski</p>
+              <p class="info-note" data-i18n="educationItemTwoPlace">lic.</p>
+            </div>
+          </div>
+        </div>
+        <div class="education-languages" id="section-5" aria-labelledby="languages-title">
+          <h3 class="stack-label" id="languages-title" data-i18n="languagesTitle">Języki.</h3>
+        <div class="language-grid">
+          <div class="language-card">
+            <span class="language-code">PL</span>
+            <span class="language-level" data-i18n="polishLevel">Native</span>
+          </div>
+          <div class="language-card">
+            <span class="language-code">EN</span>
+            <div class="language-detail">
+              <span class="language-level" data-i18n="englishLevel">C1</span>
+              <span class="language-note" data-i18n="englishEvidence">(UW, 2024 & FCE, 2017)</span>
+            </div>
+          </div>
+          <div class="language-card">
+            <span class="language-code">DE</span>
+            <span class="language-level" data-i18n="germanLevel">B1+</span>
+          </div>
+        </div>
         </div>
       </section>
+
+
 
       <section
         class="contact-section info-section"
@@ -496,34 +339,23 @@ import ThemeToggle from "../components/ThemeToggle.astro";
             Masz pomysł albo projekt, który potrzebuje spokojnej formy? Napisz.
           </p>
           <div class="contact-right">
-            <a class="contact-email" href="mailto:hello@example.com">
-              hello@example.com <span aria-hidden="true">↗</span>
+            <a class="contact-email" href="mailto:patryk1tk@gmail.com">
+              patryk1tk@gmail.com<span class="contact-email-arrow" aria-hidden="true">↗</span>
             </a>
 
-            <div class="contact-meta">
-              <div class="contact-method">
-                <span class="contact-detail-label" data-i18n="contactEmailLabel">mail</span>
-                <span class="contact-detail-value">hello@example.com</span>
-              </div>
-              <div class="contact-method">
-                <span class="contact-detail-label" data-i18n="contactPhoneLabel">telefon</span>
-                <span class="contact-detail-value" data-i18n="contactPhonePlaceholder">do uzupełnienia</span>
-              </div>
-              <div class="captcha-slot" role="note" data-i18n-attr="aria-label:contactCaptchaTitle">
-                <span class="captcha-mark" aria-hidden="true">✓</span>
-                <span>
-                  <strong data-i18n="contactCaptchaTitle">CAPTCHA / miejsce</strong>
-                  <span class="captcha-copy" data-i18n="contactCaptchaCopy">
-                    Miejsce na weryfikację maila i telefonu.
-                  </span>
-                </span>
-              </div>
-            </div>
-
-            <nav class="contact-socials" data-i18n-attr="aria-label:contactSocialsLabel">
-              <a class="contact-social-link" href="https://www.behance.net/2s0lace" target="_blank" rel="noreferrer">Behance</a>
-              <a class="contact-social-link" href="https://www.linkedin.com/in/patryk-taborek-7691033ba/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a class="contact-social-link" href="https://www.instagram.com/2s0lace/" target="_blank" rel="noreferrer">Instagram / 2s0lace</a>
+            <nav class="contact-links" data-i18n-attr="aria-label:contactSocialsLabel">
+              <a class="contact-row" href="https://www.behance.net/2s0lace" target="_blank" rel="noreferrer">
+                <span class="contact-row-label">behance</span>
+                <span class="contact-row-value">2s0lace <span class="contact-row-arrow" aria-hidden="true">↗</span></span>
+              </a>
+              <a class="contact-row" href="https://www.linkedin.com/in/patryk-taborek-7691033ba/" target="_blank" rel="noreferrer">
+                <span class="contact-row-label">linkedin</span>
+                <span class="contact-row-value">Patryk Taborek <span class="contact-row-arrow" aria-hidden="true">↗</span></span>
+              </a>
+              <a class="contact-row" href="https://www.instagram.com/2s0lace/" target="_blank" rel="noreferrer">
+                <span class="contact-row-label">instagram</span>
+                <span class="contact-row-value">@2s0lace <span class="contact-row-arrow" aria-hidden="true">↗</span></span>
+              </a>
             </nav>
           </div>
         </div>
@@ -532,7 +364,8 @@ import ThemeToggle from "../components/ThemeToggle.astro";
 
     <footer class="footer">
       <span data-i18n="common.footerCopyright">© 2026 Patryk</span>
-      <a href="mailto:hello@example.com">hello@example.com <span aria-hidden="true">↗</span></a>
+      <a class="footer-contact" href="#section-7" data-section-link="section7" data-i18n="common.contact">Kontakt</a>
+      <a href="mailto:patryk1tk@gmail.com">patryk1tk@gmail.com <span aria-hidden="true">↗</span></a>
     </footer>
   </div>
 </BaseLayout>

@@ -4,6 +4,16 @@
   data-i18n-attr="aria-label:common.sectionsLabel"
 >
   <button
+    class="section-toggle"
+    type="button"
+    data-section-target="section6"
+    aria-controls="section-6"
+    aria-pressed="false"
+  >
+    <span class="section-box" aria-hidden="true"></span>
+    <span data-i18n="common.sectionPortfolio">Portfolio</span>
+  </button>
+  <button
     class="section-toggle is-active"
     type="button"
     data-section-target="section2"
@@ -26,26 +36,6 @@
   <button
     class="section-toggle"
     type="button"
-    data-section-target="section4"
-    aria-controls="section-4"
-    aria-pressed="false"
-  >
-    <span class="section-box" aria-hidden="true"></span>
-    <span data-i18n="common.sectionEducation">Wykształcenie</span>
-  </button>
-  <button
-    class="section-toggle"
-    type="button"
-    data-section-target="section5"
-    aria-controls="section-5"
-    aria-pressed="false"
-  >
-    <span class="section-box" aria-hidden="true"></span>
-    <span data-i18n="common.sectionLanguages">Języki</span>
-  </button>
-  <button
-    class="section-toggle"
-    type="button"
     data-section-target="stack"
     aria-controls="section-stack"
     aria-pressed="false"
@@ -56,12 +46,12 @@
   <button
     class="section-toggle"
     type="button"
-    data-section-target="section6"
-    aria-controls="section-6"
+    data-section-target="section4"
+    aria-controls="section-4"
     aria-pressed="false"
   >
     <span class="section-box" aria-hidden="true"></span>
-    <span data-i18n="common.sectionPortfolio">Portfolio</span>
+    <span data-i18n="common.sectionEducation">Wykształcenie</span>
   </button>
   <button
     class="section-toggle"
@@ -73,4 +63,5 @@
     <span class="section-box" aria-hidden="true"></span>
     <span data-i18n="common.sectionContact">Kontakt</span>
   </button>
+
 </nav>

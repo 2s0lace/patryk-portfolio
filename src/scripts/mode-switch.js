@@ -2,6 +2,17 @@ const translations = {
   pl: {
     common: {
       aboutLabel: "O mnie",
+      send: "Wyślij",
+      portfolioGithubTitle: "Projekty na GitHubie",
+      portfolioMoreGithub: "Więcej projektów na GitHubie",
+      portfolioSilvaieeType: "Python · agenci AI do ROM hackingu Pokémon i benchmarki modeli",
+      portfolioMorfoType: "Android / web · anatomia zębów w 3D, porównywanie i quizy FDI",
+      portfolioLuxuriaType: "Next.js · strona hodowli Maine Coon · Material Design 3",
+      previewViewWork: "Zobacz projekty",
+      previewOtherWork: "Pozostałe projekty",
+      previewBioLabel: "Miejsce na Twoje słowa",
+      previewBioPrompt: "Tutaj napiszemy krótko o Twoim podejściu, drodze i tym, co chcesz robić dalej.",
+      previewPersonal: "Bardziej osobiście — muzyka, inspiracje i reszta",
       approachKicker: "02 / podejście",
       checkPatryk: "Sprawdź tryb Patryk",
       contact: "Kontakt",
@@ -24,11 +35,22 @@ const translations = {
       statusLabel: "Status dostępności",
       openToWork: "otwarty na projekty",
       workKicker: "01 / wybrane rzeczy",
+      topsterTrigger: "topster",
+      topsterKicker: "muzyka / gridy",
+      topsterTitle: "Topster.",
+      topsterClose: "Zamknij gridy muzyczne",
+      topsterLast30Days: "ostatnie 30 dni",
+      topsterFavourites: "ulubione",
+      topsterLoading: "ładuję Last.fm",
+      topsterNoCover: "brak okładki",
+      topsterRymSource: "z ocen RYM",
     },
     patryk: {
       title: "Patryk — portfolio",
       heroHeadline: "[ˈpatrɨk]",
-      cvKicker: "01 / cv",
+      heroDescriptor: "Grafika, motion i interfejsy. Od pomysłu do gotowego materiału.",
+      bioLead: "Projektuję grafikę, animacje i interfejsy. Pracuję przy materiałach OPPO na polski rynek i rozwijam własne projekty.",
+      cvKicker: "02 / cv",
       cvTitle: "CV.",
       cvRoleLabel: "rola",
       cvRole: "projektant / developer",
@@ -41,7 +63,8 @@ const translations = {
       cvJmoPeriod: "06.2026 — teraz",
       cvJmoBulletOne: "Projektowanie key visuali, materiałów POSM i banerów e-commerce (Allegro, sklepy partnerskie) dla premier produktowych OPPO na rynek polski",
       cvJmoBulletTwo: "Adaptacja i lokalizacja globalnych materiałów kampanijnych — KV, DTP, assety produktowe",
-      cvJmoBulletThree: "Montaż i postprodukcja materiałów na social media — dwa filmy kampanii Reno16 5G z wynikiem 8M+ i 4M+ wyświetleń",
+      cvJmoVideoLocalization: "Lokalizacja materiałów wideo OPPO na rynek polski — tłumaczenie, adaptacja tekstów ekranowych i napisy",
+      cvJmoBulletThree: "Montaż i postprodukcja materiałów na social media — dwa filmy kampanii Reno16 5G z wynikiem 8,4M i 11,4M wyświetleń",
       cvJmoBulletFour: "Animacja assetów wektorowych i grafika ruchoma w After Effects",
       cvFreelanceOrg: "Freelance",
       cvFreelanceRole: "Graphic / Visual Designer",
@@ -54,11 +77,11 @@ const translations = {
       cvTeachingRole: "Lektor / korepetytor",
       cvTeachingPeriod: "2024 — teraz",
       cvTeachingBulletOne: "Lektor w szkole językowej, obecnie korepetycje indywidualne i grupowe",
-      aboutKicker: "02 / o mnie",
+      aboutKicker: "03 / o mnie",
       aboutTitle: "O mnie.",
       whyDesignCopy: "Dlaczego projektowanie graficzne? Bo chciałem pokazać mojemu dawnemu nauczycielowi grafiki, że coś ze mnie będzie. Projekt 2s0lace powstał w 2020 roku po nudnym zadaniu domowym ze szkoły.",
       musicReason: "Czy próbowałem robić muzykę? Tak, ale to nie było dla mnie.",
-      musicDecision: "Ostatecznie postanowiłem zostać jedynym obserwatorem.",
+      musicDecision: "Ostatecznie postanowiłem pozostać tylko słuchaczem.",
       musicFaves: "faves",
       musicMostListened: "najczęściej słuchane",
       musicRym: "rym",
@@ -69,10 +92,13 @@ const translations = {
       aboutInterestThree: "Sprzęt elektroniczny",
       aboutInterestFour: "Muzyka",
       aboutInterestFive: "Dialekty języka angielskiego (mówię amerykańskim, potrafię brytyjskim)",
-      aboutInterestSix: "Gry komputerowe",
       aboutInterestSeven: "Koty",
       aboutInterestEight: "Cybersecurity",
       aboutInterestNine: "Nauczanie",
+      aboutGamesLabel: "Gry",
+      aboutGamesFavouritesLabel: "Ulubione",
+      aboutGamesMilestonesLabel: "Wyniki rywalizacyjne",
+      aboutGamesPokemonLabel: "Ulubione Pokémony",
       aboutInspirationsLabel: "Inspiracje",
       aboutInspirationOne: "Nothing",
       aboutInspirationTwo: "A Cold Wall",
@@ -87,10 +113,7 @@ const translations = {
       aboutPersonalComputerLabel: "Komputer osobisty",
       aboutComputerFans: "Thermaltake CPU fan + jakieś losowe wentylatory z Morele.net",
       aboutConcertsLabel: "Koncerty",
-      aboutConcertSoonLabel: "SOON",
-      aboutConcertSoonEvent: "Tiffany Day (2026)",
-      aboutConcertSource: "źródło",
-      educationKicker: "03 / wykształcenie",
+      educationKicker: "05 / wykształcenie",
       educationTitle: "Wykształcenie.",
       educationItemOneMeta: "2025 — teraz",
       educationItemOne: "Cyberbezpieczeństwo @ Uniwersytet VIZJA",
@@ -98,13 +121,13 @@ const translations = {
       educationItemTwoMeta: "2021 — teraz",
       educationItemTwo: "Filologia angielska @ Uniwersytet Warszawski",
       educationItemTwoPlace: "lic.",
-      languagesKicker: "04 / języki",
+      languagesKicker: "06 / języki",
       languagesTitle: "Języki.",
       polishLevel: "Native",
       englishLevel: "C1",
       englishEvidence: "(UW, 2024 i FCE, 2017)",
       germanLevel: "B1+",
-      stackKicker: "05 / stack",
+      stackKicker: "04 / stack",
       stackTitle: "Stack.",
       stackMotionLabel: "MOTION / VIDEO",
       stackMotionOne: "After Effects",
@@ -136,38 +159,39 @@ const translations = {
       stackAiNine: "Vercel",
       stackAiTen: "prompt design",
       stackIntro: "Projektuję grafikę i motion od dziecka, głównie pod wpływem emF3lipe i polskich twórców miniaturek na YouTube. W 2013 roku stawiałem pierwsze kroki w GIMP-ie i After Effects. Reszta przyszła naturalnie. Nie wyobrażam sobie, żebym w dalszym życiu nie robił nic kreatywnego.",
-      stackResultsPlaceholder: "Link do moich wyników: [placeholder]",
-      portfolioKicker: "06 / portfolio",
+      stackResultImageLabel: "grafika YouTube",
+      stackResultVideoLabel: "motion video",
+      portfolioKicker: "01 / portfolio",
       comparisonEarlyTitle: "MIĘDZYSZKOLNY KONKURS GRAFIKI KOMPUTEROWEJ",
       comparisonEarlyEvent: '"MYSZKĄ MALOWANE"',
       comparisonSource: "źródło",
       comparisonCurrentLabel: "maksymalny zasięg:",
-      comparisonCurrentValue: "8M+ i 4M+ wyświetleń",
+      comparisonCurrentValue: "8,4M i 11,4M wyświetleń",
       comparisonCurrentPlatform: "@ TikTok",
       comparisonTikTokSource: "źródło",
-      workTitle: "Wybrane projekty.",
-      projectOneTitle: "Forma / studio",
-      projectOneType: "identyfikacja · web design",
-      projectTwoTitle: "Narrow / objects",
-      projectTwoType: "e-commerce · art direction",
-      projectTwoVisual: "nadal\nw ruchu",
+      workTitle: "Wybrane case studies.",
+      portfolioOppoType: "motion · kampania social media",
+      portfolioOppoStat: "8,4M + 11,4M wyświetleń",
+      portfolioRuddyNlcType: "kampania · plakat eventowy",
+      portfolioRuddyHalloweenType: "kampania · projekt odzieży",
+      portfolioCsbType: "identyfikacja · strategia social media",
+      portfolioDigiQuizType: "UX/UI · produkt edukacyjny",
+      portfolioNaiczycielType: "UX/UI · EdTech oparty na AI",
+      portfolioWorkInProgress: "W trakcie prac",
+      portfolioMorePatryk: "Więcej case studies na Behance",
       statement:
         "Lubię proste rzeczy, które mają własny charakter. Łączę strategię, formę i kod, żeby budować marki oraz produkty, do których chce się wracać.",
-      contactKicker: "07 / kontakt",
+      contactKicker: "06 / kontakt",
       contactTitle: "Porozmawiajmy.",
       contactCopy:
         "Masz pomysł albo projekt, który potrzebuje spokojnej formy? Napisz.",
-      contactEmailLabel: "mail",
-      contactPhoneLabel: "telefon",
-      contactPhonePlaceholder: "do uzupełnienia",
-      contactCaptchaTitle: "CAPTCHA / miejsce",
-      contactCaptchaCopy: "Miejsce na weryfikację maila i telefonu.",
       contactSocialsLabel: "Linki kontaktowe",
     },
     "2s0lace": {
       title: "2s0lace — portfolio",
+      heroDescriptor: "Niezależny projekt wizualny. Plakaty, okładki i eksperymenty z obrazem.",
       heroHeadline: "[tu ˈsɑləs]",
-      cvKicker: "01 / profil",
+      cvKicker: "02 / profil",
       cvTitle: "2s0lace.",
       cvRoleLabel: "focus",
       cvRole: "visual systems / creative code",
@@ -180,7 +204,8 @@ const translations = {
       cvJmoPeriod: "06.2026 — teraz",
       cvJmoBulletOne: "Projektowanie key visuali, materiałów POSM i banerów e-commerce (Allegro, sklepy partnerskie) dla premier produktowych OPPO na rynek polski",
       cvJmoBulletTwo: "Adaptacja i lokalizacja globalnych materiałów kampanijnych — KV, DTP, assety produktowe",
-      cvJmoBulletThree: "Montaż i postprodukcja materiałów na social media — dwa filmy kampanii Reno16 5G z wynikiem 8M+ i 4M+ wyświetleń",
+      cvJmoVideoLocalization: "Lokalizacja materiałów wideo OPPO na rynek polski — tłumaczenie, adaptacja tekstów ekranowych i napisy",
+      cvJmoBulletThree: "Montaż i postprodukcja materiałów na social media — dwa filmy kampanii Reno16 5G z wynikiem 8,4M i 11,4M wyświetleń",
       cvJmoBulletFour: "Animacja assetów wektorowych i grafika ruchoma w After Effects",
       cvFreelanceOrg: "Freelance",
       cvFreelanceRole: "Graphic / Visual Designer",
@@ -194,16 +219,16 @@ const translations = {
       cvTeachingPeriod: "2024 — teraz",
       cvTeachingBulletOne: "Lektor w szkole językowej, obecnie korepetycje indywidualne i grupowe",
       aboutKicker: "02 / o projekcie",
-      aboutTitle: "Jeśli nie chcesz zobaczyć mojej strony, która szuka ukojenia, przeczytaj to podsumowanie inspirowane AI:",
+      aboutTitle: "Jeśli nie chcesz poznać tej strony mnie, która szuka mistycznego „solace”, przeczytaj to podsumowanie inspirowane AI:",
       aboutAiJoke: "(żart, zobacz portfolio)",
       aboutAiPromptLabel: "Zapytaj o 2s0lace",
-      aboutAiPrompt: "hoo is 2s0lace instegrem",
+      aboutAiPrompt: "kim jezd 2s0lace instegram",
       aboutAiSendLabel: "Wyślij wiadomość",
       aboutAiThinking: "Myślę",
       aboutAiDone: "Gotowe",
       aboutAiResponse: "2s0lace to niezależny projekt graficzny i multimedialny. Łączy plakat, motion i atmosferę elektronicznej muzyki w krótkie, osobiste momenty.",
       aboutAiStopMessage: "Przestań marnować zasoby obliczeniowe i sprawdź portfolio!",
-      educationKicker: "03 / zaplecze",
+      educationKicker: "05 / zaplecze",
       educationTitle: "Kontekst.",
       educationItemOneMeta: "w toku",
       educationItemOne: "Visual research",
@@ -211,27 +236,29 @@ const translations = {
       educationItemTwoMeta: "w toku",
       educationItemTwo: "Creative technology",
       educationItemTwoPlace: "praktyka własna",
-      languagesKicker: "04 / języki",
+      languagesKicker: "06 / języki",
       languagesTitle: "Języki.",
       polishLevel: "Native",
       englishLevel: "C1",
       germanLevel: "B1+",
-      portfolioKicker: "05 / portfolio",
+      portfolioKicker: "01 / portfolio",
       comparisonEarlyTitle: "MIĘDZYSZKOLNY KONKURS GRAFIKI KOMPUTEROWEJ",
       comparisonEarlyEvent: '"MYSZKĄ MALOWANE"',
       comparisonSource: "źródło",
       comparisonCurrentLabel: "maksymalny zasięg:",
-      comparisonCurrentValue: "8M+ i 4M+ wyświetleń",
+      comparisonCurrentValue: "8,4M i 11,4M wyświetleń",
       comparisonCurrentPlatform: "@ TikTok",
       comparisonTikTokSource: "źródło",
-      workTitle: "Ostatnie eksperymenty.",
-      projectOneTitle: "Signal / 01",
-      projectOneType: "creative coding · direction",
-      projectTwoTitle: "Soft / error",
-      projectTwoType: "motion · digital objects",
+      workTitle: "Wybrane prace.",
+      portfolioBannedType: "koncepcja edytorialowa",
+      portfolioFanAdType: "fanowski koncept reklamowy",
+      portfolioFanCampaignType: "fanowska koncepcja kampanii",
+      portfolioCoverType: "fanowska okładka",
+      portfolioPosterType: "fanowski plakat",
+      portfolioMoreSolace: "Więcej prac na Instagramie",
       statement:
-        "Tutaj forma może trochę skręcić. Interesują mnie napięcia między porządkiem i błędem, tym co użytkowe i tym, co po prostu zostaje w głowie.",
-      contactKicker: "06 / kontakt",
+        "Tutaj forma może trochę skręcić. Interesują mnie napięcia między porządkiem a błędem, tym co użytkowe i tym, co po prostu zostaje w głowie.",
+      contactKicker: "03 / kontakt",
       contactTitle: "Porozmawiajmy.",
       contactCopy:
         "Masz dziwny pomysł albo cyfrowy obiekt w głowie? Napisz.",
@@ -240,6 +267,17 @@ const translations = {
   en: {
     common: {
       aboutLabel: "About me",
+      send: "Send",
+      portfolioGithubTitle: "GitHub projects",
+      portfolioMoreGithub: "More projects on GitHub",
+      portfolioSilvaieeType: "Python · AI agents for Pokémon ROM hacking and model benchmarking",
+      portfolioMorfoType: "Android / web · 3D tooth anatomy, comparison and FDI quizzes",
+      portfolioLuxuriaType: "Next.js · Maine Coon cattery website · Material Design 3",
+      previewViewWork: "View selected work",
+      previewOtherWork: "More projects",
+      previewBioLabel: "Space for your words",
+      previewBioPrompt: "We will write a short introduction here about your approach, your story and what you want to do next.",
+      previewPersonal: "More personally — music, inspirations and the rest",
       approachKicker: "02 / approach",
       checkPatryk: "Check Patryk",
       contact: "Contact",
@@ -262,11 +300,22 @@ const translations = {
       statusLabel: "Availability status",
       openToWork: "open to work",
       workKicker: "01 / selected work",
+      topsterTrigger: "topster",
+      topsterKicker: "music / grids",
+      topsterTitle: "Topster.",
+      topsterClose: "Close music grids",
+      topsterLast30Days: "last 30 days",
+      topsterFavourites: "favorites",
+      topsterLoading: "loading Last.fm",
+      topsterNoCover: "no cover",
+      topsterRymSource: "from RYM ratings",
     },
     patryk: {
       title: "Patryk — portfolio",
       heroHeadline: "[ˈpætrɪk]",
-      cvKicker: "01 / cv",
+      heroDescriptor: "Graphic design, motion and interfaces. From an idea to the finished piece.",
+      bioLead: "I design graphics, animations and interfaces. I work on OPPO content for the Polish market and develop projects of my own.",
+      cvKicker: "02 / cv",
       cvTitle: "CV.",
       cvRoleLabel: "role",
       cvRole: "designer / developer",
@@ -279,7 +328,8 @@ const translations = {
       cvJmoPeriod: "06.2026 — present",
       cvJmoBulletOne: "Designing key visuals, POSM materials and e-commerce banners (Allegro, partner stores) for OPPO product launches in Poland",
       cvJmoBulletTwo: "Adapting and localizing global campaign materials — KV, DTP and product assets",
-      cvJmoBulletThree: "Editing and post-production for social media — two Reno16 5G campaign videos with 8M+ and 4M+ views",
+      cvJmoVideoLocalization: "Localizing OPPO video content for the Polish market, including translation, on-screen text adaptation and subtitles",
+      cvJmoBulletThree: "Editing and post-production for social media — two Reno16 5G campaign videos with 8.4M and 11.4M views",
       cvJmoBulletFour: "Animating vector assets and creating motion graphics in After Effects",
       cvFreelanceOrg: "Freelance",
       cvFreelanceRole: "Graphic / Visual Designer",
@@ -292,9 +342,9 @@ const translations = {
       cvTeachingRole: "Teacher / tutor",
       cvTeachingPeriod: "2024 — present",
       cvTeachingBulletOne: "Language school teacher, currently providing individual and group tutoring",
-      aboutKicker: "02 / about me",
+      aboutKicker: "03 / about me",
       aboutTitle: "About me.",
-      whyDesignCopy: "Why graphic design? Because I wanted to show my old graphic design teacher I will amount to something. The 2s0lace project began in 2020 following boring school homework.",
+      whyDesignCopy: "Why graphic design? Because I wanted to show my old graphic design teacher I would amount to something. The 2s0lace project began in 2020 after a boring school assignment.",
       musicReason: "Did I try to make music? Yes, but this wasn't for me.",
       musicDecision: "I eventually decided to be the sole observer.",
       musicFaves: "faves",
@@ -307,10 +357,13 @@ const translations = {
       aboutInterestThree: "Electronic hardware",
       aboutInterestFour: "Music",
       aboutInterestFive: "English dialects (I speak American, I can do British)",
-      aboutInterestSix: "Video games",
       aboutInterestSeven: "Cats",
       aboutInterestEight: "Cybersecurity",
       aboutInterestNine: "Teaching",
+      aboutGamesLabel: "Games",
+      aboutGamesFavouritesLabel: "Favourites",
+      aboutGamesMilestonesLabel: "Competitive milestones",
+      aboutGamesPokemonLabel: "Favourite Pokémon",
       aboutInspirationsLabel: "Inspirations",
       aboutInspirationOne: "Nothing",
       aboutInspirationTwo: "A Cold Wall",
@@ -325,10 +378,7 @@ const translations = {
       aboutPersonalComputerLabel: "Personal Computer",
       aboutComputerFans: "Thermaltake CPU fan + some random Morele.net fans",
       aboutConcertsLabel: "Concerts",
-      aboutConcertSoonLabel: "SOON",
-      aboutConcertSoonEvent: "Tiffany Day (2026)",
-      aboutConcertSource: "source",
-      educationKicker: "03 / education",
+      educationKicker: "05 / education",
       educationTitle: "Education.",
       educationItemOneMeta: "2025 — present",
       educationItemOne: "Cybersecurity @ VIZJA University",
@@ -336,13 +386,13 @@ const translations = {
       educationItemTwoMeta: "2021 — present",
       educationItemTwo: "English philology @ University of Warsaw",
       educationItemTwoPlace: "BA",
-      languagesKicker: "04 / languages",
+      languagesKicker: "06 / languages",
       languagesTitle: "Languages.",
       polishLevel: "Native",
       englishLevel: "C1",
       englishEvidence: "(University of Warsaw, 2024 & FCE, 2017)",
       germanLevel: "B1+",
-      stackKicker: "05 / stack",
+      stackKicker: "04 / stack",
       stackTitle: "Stack.",
       stackMotionLabel: "MOTION / VIDEO",
       stackMotionOne: "After Effects",
@@ -374,38 +424,39 @@ const translations = {
       stackAiNine: "Vercel",
       stackAiTen: "prompt design",
       stackIntro: "I've done graphic/motion design since I was a child, primarily inspired by the likes of emF3lipe and Polish YouTube thumbnail creators. In 2013, I made my first steps in GIMP and After Effects. The rest came naturally. I cannot imagine not doing anything creative further in life.",
-      stackResultsPlaceholder: "Link to my results: [placeholder]",
-      portfolioKicker: "06 / portfolio",
+      stackResultImageLabel: "YouTube graphic",
+      stackResultVideoLabel: "motion video",
+      portfolioKicker: "01 / portfolio",
       comparisonEarlyTitle: "INTERSCHOOL COMPUTER GRAPHICS COMPETITION",
       comparisonEarlyEvent: '"PAINTED WITH A MOUSE"',
       comparisonSource: "source",
       comparisonCurrentLabel: "max reach:",
-      comparisonCurrentValue: "8M+ and 4M+ views",
+      comparisonCurrentValue: "8.4M and 11.4M views",
       comparisonCurrentPlatform: "@ TikTok",
       comparisonTikTokSource: "source",
-      workTitle: "Selected work.",
-      projectOneTitle: "Forma / studio",
-      projectOneType: "identity · web design",
-      projectTwoTitle: "Narrow / objects",
-      projectTwoType: "e-commerce · art direction",
-      projectTwoVisual: "still\nmoving",
+      workTitle: "Selected case studies.",
+      portfolioOppoType: "motion · social campaign",
+      portfolioOppoStat: "8.4M + 11.4M views",
+      portfolioRuddyNlcType: "campaign · event poster",
+      portfolioRuddyHalloweenType: "campaign · apparel design",
+      portfolioCsbType: "brand identity · social strategy",
+      portfolioDigiQuizType: "UX/UI · educational product",
+      portfolioNaiczycielType: "UX/UI · AI-powered EdTech",
+      portfolioWorkInProgress: "Work in progress",
+      portfolioMorePatryk: "More case studies on Behance",
       statement:
         "I like simple things with a distinct character. I combine strategy, form and code to build brands and products people want to return to.",
-      contactKicker: "07 / contact",
+      contactKicker: "06 / contact",
       contactTitle: "Let's talk.",
       contactCopy:
         "Have an idea or a project that needs a calm, considered form? Get in touch.",
-      contactEmailLabel: "email",
-      contactPhoneLabel: "phone",
-      contactPhonePlaceholder: "to be added",
-      contactCaptchaTitle: "CAPTCHA / slot",
-      contactCaptchaCopy: "Reserved for email and phone verification.",
       contactSocialsLabel: "Contact links",
     },
     "2s0lace": {
       title: "2s0lace — portfolio",
+      heroDescriptor: "An independent visual project. Posters, cover art and experiments with imagery.",
       heroHeadline: "[tu ˈsɑləs]",
-      cvKicker: "01 / profile",
+      cvKicker: "02 / profile",
       cvTitle: "2s0lace.",
       cvRoleLabel: "focus",
       cvRole: "visual systems / creative code",
@@ -418,7 +469,8 @@ const translations = {
       cvJmoPeriod: "06.2026 — present",
       cvJmoBulletOne: "Designing key visuals, POSM materials and e-commerce banners (Allegro, partner stores) for OPPO product launches in Poland",
       cvJmoBulletTwo: "Adapting and localizing global campaign materials — KV, DTP and product assets",
-      cvJmoBulletThree: "Editing and post-production for social media — two Reno16 5G campaign videos with 8M+ and 4M+ views",
+      cvJmoVideoLocalization: "Localizing OPPO video content for the Polish market, including translation, on-screen text adaptation and subtitles",
+      cvJmoBulletThree: "Editing and post-production for social media — two Reno16 5G campaign videos with 8.4M and 11.4M views",
       cvJmoBulletFour: "Animating vector assets and creating motion graphics in After Effects",
       cvFreelanceOrg: "Freelance",
       cvFreelanceRole: "Graphic / Visual Designer",
@@ -441,7 +493,7 @@ const translations = {
       aboutAiDone: "Done",
       aboutAiResponse: "2s0lace is an independent graphic design and multimedia art project. It combines poster, motion and the atmosphere of electronic music into short, personal moments.",
       aboutAiStopMessage: "Stop wasting compute and check the portfolio!",
-      educationKicker: "03 / studies",
+      educationKicker: "05 / studies",
       educationTitle: "Background.",
       educationItemOneMeta: "ongoing",
       educationItemOne: "Visual research",
@@ -449,27 +501,29 @@ const translations = {
       educationItemTwoMeta: "ongoing",
       educationItemTwo: "Creative technology",
       educationItemTwoPlace: "self-directed practice",
-      languagesKicker: "04 / languages",
+      languagesKicker: "06 / languages",
       languagesTitle: "Languages.",
       polishLevel: "Native",
       englishLevel: "C1",
       germanLevel: "B1+",
-      portfolioKicker: "05 / portfolio",
+      portfolioKicker: "01 / portfolio",
       comparisonEarlyTitle: "INTERSCHOOL COMPUTER GRAPHICS COMPETITION",
       comparisonEarlyEvent: '"PAINTED WITH A MOUSE"',
       comparisonSource: "source",
       comparisonCurrentLabel: "max reach:",
-      comparisonCurrentValue: "8M+ and 4M+ views",
+      comparisonCurrentValue: "8.4M and 11.4M views",
       comparisonCurrentPlatform: "@ TikTok",
       comparisonTikTokSource: "source",
-      workTitle: "Recent experiments.",
-      projectOneTitle: "Signal / 01",
-      projectOneType: "creative coding · direction",
-      projectTwoTitle: "Soft / error",
-      projectTwoType: "motion · digital objects",
+      workTitle: "Selected work.",
+      portfolioBannedType: "editorial concept",
+      portfolioFanAdType: "fan ad concept",
+      portfolioFanCampaignType: "fan campaign concept",
+      portfolioCoverType: "fan cover art",
+      portfolioPosterType: "fan poster",
+      portfolioMoreSolace: "More work on Instagram",
       statement:
         "Here, form can take a slight turn. I'm interested in the tension between order and error, the useful and the things that simply stay with you.",
-      contactKicker: "06 / contact",
+      contactKicker: "03 / contact",
       contactTitle: "Let's talk.",
       contactCopy:
         "Have a strange idea or a digital object in mind? Send me a note.",
@@ -493,10 +547,12 @@ const sectionKeys = [...sectionButtons].map((button) => button.dataset.sectionTa
 const sectionLinks = document.querySelectorAll("[data-section-link]");
 const availableSectionsByMode = {
   patryk: sectionKeys,
-  "2s0lace": ["section3", "section6"],
+  "2s0lace": ["section6", "section3", "section7"],
 };
-const storedSection = localStorage.getItem("portfolio-section");
-const defaultSection = sectionKeys.includes(storedSection) ? storedSection : "section2";
+const linkedSection = [...sectionButtons].find(
+  (button) => `#${button.getAttribute("aria-controls")}` === window.location.hash,
+)?.dataset.sectionTarget;
+const defaultSection = linkedSection || null;
 
 const state = {
   mode: document.body.dataset.mode || "patryk",
@@ -510,12 +566,34 @@ function getTranslation(key) {
   return translations[state.locale]?.[scope]?.[name] ?? translations.pl?.[scope]?.[name] ?? null;
 }
 
+// Manrope has no glyph for these two IPA letters, so they fall back to a system font
+// that draws them without side bearings. The tight display tracking on the headline
+// then pulls the neighbouring letters over them, so they keep their own spacing. The
+// other IPA characters in the headlines have room to spare and stay as designed.
+const IPA_GLYPH = /[\u0268\u026A]/g;
+const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;" };
+
+function renderIpa(value) {
+  return value
+    .replace(/[&<>]/g, (character) => HTML_ESCAPES[character])
+    .replace(IPA_GLYPH, (glyph) => '<span class="ipa-glyph">' + glyph + "</span>");
+}
+
 function applyTranslations() {
   document.documentElement.lang = state.locale;
 
+  document.querySelectorAll("[data-bio-locale]").forEach((element) => {
+    element.hidden = element.dataset.bioLocale !== state.locale;
+  });
+
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = getTranslation(element.dataset.i18n);
-    if (value !== null) element.textContent = value;
+    if (value === null) return;
+    if ("i18nIpa" in element.dataset) {
+      element.innerHTML = renderIpa(value);
+      return;
+    }
+    element.textContent = value;
   });
 
   document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
@@ -555,7 +633,7 @@ function applyTranslations() {
 function applySections() {
   const availableSections = availableSectionsByMode[state.mode] || sectionKeys;
 
-  if (!availableSections.includes(state.activeSection)) {
+  if (state.activeSection && !availableSections.includes(state.activeSection)) {
     state.activeSection = availableSections[0];
   }
 
@@ -573,7 +651,7 @@ function applySections() {
     target?.setAttribute("aria-hidden", String(!isActive));
   });
 
-  localStorage.setItem("portfolio-section", state.activeSection);
+  document.body.classList.toggle("has-open-module", Boolean(state.activeSection));
 }
 
 let modeToastTimeout;
@@ -695,8 +773,103 @@ aiChatSend?.addEventListener("click", () => {
   }, 820);
 });
 
+const headlineMotion = window.matchMedia("(min-width: 721px)");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+let headlineGhost = null;
+let headlineSwapToken = 0;
+
+function canAnimateHeadline() {
+  return headlineMotion.matches && !reducedMotion.matches;
+}
+
+function prepareHeadlineSwap(direction) {
+  headlineGhost = null;
+  if (!canAnimateHeadline()) return;
+  const heading = document.querySelector("#hero-title");
+  const current = heading?.querySelector("[data-i18n='heroHeadline']");
+  if (!heading || !current) return;
+
+  heading.querySelectorAll(".headline-ghost").forEach((stale) => stale.remove());
+  current.getAnimations().forEach((stale) => stale.cancel());
+
+  const ghost = current.cloneNode(true);
+  ghost.removeAttribute("data-i18n");
+  ghost.setAttribute("aria-hidden", "true");
+  ghost.classList.add("headline-ghost");
+  heading.appendChild(ghost);
+  heading.classList.add("is-swapping");
+  current.style.opacity = "0";
+  headlineGhost = ghost;
+}
+
+function runHeadlineSwap(direction) {
+  const ghost = headlineGhost;
+  headlineGhost = null;
+  if (!ghost) return;
+
+  const heading = document.querySelector("#hero-title");
+  const incoming = heading?.querySelector("[data-i18n='heroHeadline']");
+  if (!heading || !incoming) {
+    ghost.remove();
+    return;
+  }
+
+  const token = ++headlineSwapToken;
+  const shift = 72 * direction;
+  const easing = "cubic-bezier(0.2, 0.7, 0.2, 1)";
+
+  let done = false;
+  const cleanup = () => {
+    if (done) return;
+    done = true;
+    ghost.remove();
+    // a newer swap may already own the heading; do not clear its state
+    if (token !== headlineSwapToken) return;
+    incoming.style.opacity = "";
+    heading.classList.remove("is-swapping");
+  };
+
+  let started = false;
+  const start = () => {
+    if (started) return;
+    started = true;
+    incoming.style.opacity = "";
+    const timing = { duration: 450, easing, fill: "both" };
+    const departure = ghost.animate(
+      [
+        { opacity: 1, filter: "blur(0px)", transform: "translateX(0)" },
+        { opacity: 0, filter: "blur(13px)", transform: `translateX(${shift}px)` },
+      ],
+      timing,
+    );
+    const entrance = incoming.animate(
+      [
+        { opacity: 0, filter: "blur(13px)", transform: `translateX(${-shift}px)` },
+        { opacity: 1, filter: "blur(0px)", transform: "translateX(0)" },
+      ],
+      { ...timing, fill: "backwards" },
+    );
+    const startTime = document.timeline.currentTime;
+    departure.startTime = startTime;
+    entrance.startTime = startTime;
+    entrance.finished.then(cleanup, cleanup);
+  };
+
+  // rAF gives a clean frame; the timers guarantee start and cleanup still run
+  // if animations are throttled or paused (hidden tab, reduced power mode)
+  requestAnimationFrame(start);
+  window.setTimeout(start, 120);
+  window.setTimeout(cleanup, 900);
+}
+
+
+
+
 function setMode(mode) {
   if (!translations[state.locale]?.[mode]) return;
+  const isModeChange = state.mode !== mode;
+  const direction = mode === "2s0lace" ? 1 : -1;
+  if (isModeChange) prepareHeadlineSwap(direction);
   state.mode = mode;
   document.body.dataset.mode = mode;
   document.documentElement.style.setProperty(
@@ -707,6 +880,7 @@ function setMode(mode) {
   applySections();
   hideModeToast();
   resetAiChat();
+  if (isModeChange) runHeadlineSwap(direction);
 }
 
 function setLocale(locale) {
@@ -717,11 +891,28 @@ function setLocale(locale) {
   resetAiChat();
 }
 
+let themeTransition;
+
 function setTheme(theme) {
-  state.theme = theme === "dark" ? "dark" : "light";
-  document.documentElement.dataset.theme = state.theme;
-  localStorage.setItem("portfolio-theme", state.theme);
-  applyTranslations();
+  const nextTheme = theme === "dark" ? "dark" : "light";
+  const updateTheme = () => {
+    state.theme = nextTheme;
+    document.documentElement.dataset.theme = nextTheme;
+    localStorage.setItem("portfolio-theme", nextTheme);
+    applyTranslations();
+  };
+
+  if (state.theme === nextTheme) {
+    updateTheme();
+    return;
+  }
+
+  themeTransition?.skipTransition();
+  if (document.startViewTransition && !reducedMotion.matches) {
+    themeTransition = document.startViewTransition(updateTheme);
+  } else {
+    updateTheme();
+  }
 }
 
 modeButtons.forEach((button) => {
@@ -746,6 +937,7 @@ sectionButtons.forEach((button) => {
 
     state.activeSection = button.dataset.sectionTarget;
     applySections();
+    history.replaceState(null, "", `#${button.getAttribute("aria-controls")}`);
 
     document.getElementById(button.getAttribute("aria-controls"))?.scrollIntoView({
       behavior: "smooth",
@@ -776,3 +968,15 @@ setMode(state.mode);
 setLocale(state.locale);
 setTheme(state.theme);
 applySections();
+
+const topbar = document.querySelector(".topbar");
+
+function syncTopControls() {
+  const awayFromTop = window.scrollY > 12;
+  topbar?.classList.toggle("is-away-from-top", awayFromTop);
+  document.body.classList.toggle("has-scrolled-from-start", window.scrollY > 32);
+}
+
+window.addEventListener("scroll", syncTopControls, { passive: true });
+window.addEventListener("pageshow", syncTopControls);
+syncTopControls();
